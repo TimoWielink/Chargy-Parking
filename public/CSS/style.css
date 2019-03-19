@@ -10,8 +10,9 @@ p.customfont {
 }
 #mainNav {
     min-height: 56px;
-    background-color: #fff;
+
 }
+
 
 #mainNav .navbar-toggler {
     font-size: 80%;
@@ -46,7 +47,7 @@ p.customfont {
         padding-top: 0;
         padding-bottom: 0;
         border-bottom: none;
-        background-color: transparent;
+        background: white;
         -webkit-transition: background-color 0.3s ease-in-out;
         transition: background-color 0.3s ease-in-out;
     }
@@ -89,8 +90,8 @@ p.customfont {
         border-bottom: 0.25rem solid #1be847;
     }
 }
-#logo-nav\ {
-    width: 20%;
+#logo-nav {
+    width: 16%;
     /*margin-left: -10%;*/
 }
 
