@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 @font-face {
     font-family: 'Nexa Bold';
     font-style: normal;
@@ -11,33 +10,14 @@ p.customfont {
 }
 #mainNav {
     min-height: 56px;
-
-}
-
-
-#mainNav .navbar-toggler {
-    font-size: 80%;
-    padding: 0.75rem;
-    color: #1be847;
-    border: 1px solid #1be847;
-=======
-
-#mainNav {
-    min-height: 56px;
     background-color: #fff;
 }
 
 #mainNav .navbar-toggler {
     font-size: 80%;
     padding: 0.75rem;
-<<<<<<< HEAD
-    color: #64a19d;
-    border: 1px solid #64a19d;
->>>>>>> Installed Packages and Bootsrap
-=======
     color: #1be847;
     border: 1px solid #1be847;
->>>>>>> Basisc Homepage
 }
 
 #mainNav .navbar-toggler:focus {
@@ -51,11 +31,7 @@ p.customfont {
 }
 
 #mainNav .navbar-nav .nav-item:hover {
-<<<<<<< HEAD
-    /*color: fade(white, 80%);*/
-=======
     color: fade(white, 80%);
->>>>>>> Installed Packages and Bootsrap
     outline: none;
     background-color: transparent;
 }
@@ -70,11 +46,7 @@ p.customfont {
         padding-top: 0;
         padding-bottom: 0;
         border-bottom: none;
-<<<<<<< HEAD
-        background: white;
-=======
         background-color: transparent;
->>>>>>> Installed Packages and Bootsrap
         -webkit-transition: background-color 0.3s ease-in-out;
         transition: background-color 0.3s ease-in-out;
     }
@@ -86,24 +58,10 @@ p.customfont {
         -webkit-transition: none;
         transition: none;
         padding: 2rem 1.5rem;
-<<<<<<< HEAD
-<<<<<<< HEAD
         color: #1d1d27;
     }
     #mainNav .nav-link:hover {
         color: #1be847;
-=======
-        color: rgba(255, 255, 255, 0.5);
-    }
-    #mainNav .nav-link:hover {
-        color: rgba(255, 255, 255, 0.75);
->>>>>>> Installed Packages and Bootsrap
-=======
-        color: #1d1d27;
-    }
-    #mainNav .nav-link:hover {
-        color: #1be847;
->>>>>>> Basisc Homepage
     }
     #mainNav .nav-link:active {
         color: white;
@@ -120,8 +78,6 @@ p.customfont {
         border-bottom: 0.25rem solid transparent;
     }
     #mainNav.navbar-shrink .nav-link:hover {
-<<<<<<< HEAD
-<<<<<<< HEAD
         color: #1be847;
     }
     #mainNav.navbar-shrink .nav-link:active {
@@ -133,33 +89,10 @@ p.customfont {
         border-bottom: 0.25rem solid #1be847;
     }
 }
-#logo-nav {
-    width: 16%;
-    /*margin-left: -10%;*/
-}
-=======
-        color: #64a19d;
-=======
-        color: #1be847;
->>>>>>> Basisc Homepage
-    }
-    #mainNav.navbar-shrink .nav-link:active {
-        color: #1be847;
-    }
-    #mainNav.navbar-shrink .nav-link.active {
-        color: #1be847;
-        outline: none;
-        border-bottom: 0.25rem solid #1be847;
-    }
-}
-<<<<<<< HEAD
->>>>>>> Installed Packages and Bootsrap
-=======
 #logo-nav\ {
     width: 20%;
     /*margin-left: -10%;*/
 }
->>>>>>> Basisc Homepage
 
 .masthead {
     position: relative;
@@ -167,18 +100,8 @@ p.customfont {
     height: auto;
     min-height: 35rem;
     padding: 15rem 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
     background: url("/public/Images/background.jpg");
     /*background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-masthead.jpg");*/
-=======
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-masthead.jpg");
-    background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-masthead.jpg");
->>>>>>> Installed Packages and Bootsrap
-=======
-    background: url("/public/Images/background.jpg");
-    /*background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-masthead.jpg");*/
->>>>>>> Basisc Homepage
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -186,7 +109,6 @@ p.customfont {
 }
 
 .masthead h1 {
-<<<<<<< HEAD
     font-family: 'Nexa Bold';
     color: #1d1d27;
     font-size: 20px;
@@ -199,21 +121,6 @@ p.customfont {
     /*background: linear-gradient(135deg, #ffffff 0%,#57cd9b 100%);*/
     /*-webkit-text-fill-color: transparent;*/
     /*-webkit-background-clip: text;*/
-}
-#logo-home{
-width: 50%;
-=======
-    font-family: 'Varela Round';
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-    letter-spacing: 0.8rem;
-    background: #ffffff; /* Old browsers */
-    background: -moz-linear-gradient(-45deg, #ffffff 0%, #57cd9b 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg, #ffffff 0%,#57cd9b 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg, #ffffff 0%,#57cd9b 100%);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
->>>>>>> Installed Packages and Bootsrap
 }
 #logo-home{
 width: 50%;
@@ -237,15 +144,9 @@ width: 50%;
         padding: 0;
     }
     .masthead h1 {
-<<<<<<< HEAD
         /*font-size: 6.5rem;*/
         /*line-height: 6.5rem;*/
         /*letter-spacing: 0.8rem;*/
-=======
-        font-size: 6.5rem;
-        line-height: 6.5rem;
-        letter-spacing: 0.8rem;
->>>>>>> Installed Packages and Bootsrap
     }
     .masthead h2 {
         max-width: 30rem;
@@ -265,8 +166,6 @@ width: 50%;
 }
 
 .btn-primary {
-<<<<<<< HEAD
-<<<<<<< HEAD
     background-color: #1be847;
 }
 
@@ -276,55 +175,18 @@ width: 50%;
 
 .btn-primary:focus {
     background-color: #1be847;
-=======
-    background-color: #64a19d;
-=======
-    background-color: #1be847;
->>>>>>> Basisc Homepage
-}
-
-.btn-primary:hover {
-    background-color: #1be847;
-}
-
-.btn-primary:focus {
-<<<<<<< HEAD
-    background-color: #4f837f;
->>>>>>> Installed Packages and Bootsrap
-=======
-    background-color: #1be847;
->>>>>>> Basisc Homepage
     color: white;
 }
 
 .btn-primary:active {
-<<<<<<< HEAD
-<<<<<<< HEAD
     background-color: #1be847 !important;
-=======
-    background-color: #467370 !important;
->>>>>>> Installed Packages and Bootsrap
-=======
-    background-color: #1be847 !important;
->>>>>>> Basisc Homepage
 }
 
 .about-section {
     padding-top: 10rem;
-<<<<<<< HEAD
-<<<<<<< HEAD
     /*background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)));*/
     /*background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);*/
 background: #1d1d27;
-=======
-    background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)));
-    background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
->>>>>>> Installed Packages and Bootsrap
-=======
-    /*background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)));*/
-    /*background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);*/
-background: #1d1d27;
->>>>>>> Basisc Homepage
 }
 
 .about-section p {
@@ -342,15 +204,7 @@ background: #1d1d27;
 @media (min-width: 992px) {
     .projects-section .featured-text {
         padding: 0 0 0 2rem;
-<<<<<<< HEAD
-<<<<<<< HEAD
         /*border-left: 0.5rem solid #64a19d;*/
-=======
-        border-left: 0.5rem solid #64a19d;
->>>>>>> Installed Packages and Bootsrap
-=======
-        /*border-left: 0.5rem solid #64a19d;*/
->>>>>>> Basisc Homepage
     }
 }
 
@@ -364,15 +218,7 @@ background: #1d1d27;
         padding: 5rem;
     }
     .projects-section .project-text hr {
-<<<<<<< HEAD
-<<<<<<< HEAD
         border-color: #1be847;
-=======
-        border-color: #64a19d;
->>>>>>> Installed Packages and Bootsrap
-=======
-        border-color: #1be847;
->>>>>>> Basisc Homepage
         border-width: .25rem;
         width: 30%;
     }
@@ -380,30 +226,13 @@ background: #1d1d27;
 
 .signup-section {
     padding: 10rem 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
     /*background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-signup.jpg");*/
     /*background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-signup.jpg");*/
-=======
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-signup.jpg");
-    background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-signup.jpg");
->>>>>>> Installed Packages and Bootsrap
-=======
-    /*background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-signup.jpg");*/
-    /*background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-signup.jpg");*/
->>>>>>> Basisc Homepage
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
-<<<<<<< HEAD
-<<<<<<< HEAD
     background: #1be847;
-=======
->>>>>>> Installed Packages and Bootsrap
-=======
-    background: #1be847;
->>>>>>> Basisc Homepage
 }
 
 .signup-section .form-inline input {
@@ -473,15 +302,7 @@ a {
 
 a:focus, a:hover {
     text-decoration: none;
-<<<<<<< HEAD
-<<<<<<< HEAD
     color: #1be847;
-=======
-    color: #3c6360;
->>>>>>> Installed Packages and Bootsrap
-=======
-    color: #1be847;
->>>>>>> Basisc Homepage
 }
 
 .bg-black {
@@ -489,27 +310,11 @@ a:focus, a:hover {
 }
 
 .bg-primary {
-<<<<<<< HEAD
-<<<<<<< HEAD
     background-color: #1be847 !important;
 }
 
 .text-primary {
     color: #1be847 !important;
-=======
-    background-color: #64a19d !important;
-}
-
-.text-primary {
-    color: #64a19d !important;
->>>>>>> Installed Packages and Bootsrap
-=======
-    background-color: #1be847 !important;
-}
-
-.text-primary {
-    color: #1be847 !important;
->>>>>>> Basisc Homepage
 }
 
 footer {
