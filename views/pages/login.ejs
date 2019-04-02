@@ -1,50 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <title>Login V4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="../../public/Images/icons/favicon.ico"/>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <!--===============================================================================================-->
 
-    <title>Chargy</title>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../../public/CSS/util.css">
+    <link rel="stylesheet" type="text/css" href="../../public/CSS/login.css">
 
-    <!-- Bootstrap core CSS -->
     <link href="/public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="/public/CSS/login.css" rel="stylesheet">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!--===============================================================================================-->
 </head>
 <body>
 
+<div class="limiter">
+    <div class="container-login100" style="background-image: url('../../public/images/bg-01.jpg');">
+        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+            <form class="login100-form validate-form">
+					<span class="login100-form-title p-b-49">
+						Login
+					</span>
 
-<div class="sidenav">
-    <div class="login-main-text">
-        <h2>Chargy<br> Login Page</h2>
-        <p>Login or register from here to access.</p>
-    </div>
-</div>
-<div class="main">
-    <div class="col-md-6 col-sm-12">
-        <div class="login-form">
-            <form>
-                <div class="form-group">
-                    <label>User Name</label>
-                    <input type="text" class="form-control" placeholder="User Name">
+                <div class="wrap-input100 validate-input m-b-23" data-validate = "Gebruikernaam is verplicht">
+                    <span class="label-input100">Gebruikersnaam</span>
+                    <input class="input100" type="text" name="username" placeholder="Type uw gebruikersnaam">
+                    <!--<span class="focus-input100" data-symbol="&#xf206;"></span>-->
                 </div>
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" class="form-control" placeholder="Password">
+
+                <div class="wrap-input100 validate-input" data-validate="Wachtwoord is verplicht">
+                    <span class="label-input100">Wachtwoord</span>
+                    <input class="input100" type="password" name="pass" placeholder="Type uw wachtwoord">
+                    <!--<span class="focus-input100" data-symbol="&#xf190;"></span>-->
                 </div>
-                <button type="submit" class="btn btn-black">Login</button>
-                <button type="submit" class="btn btn-secondary">Register</button>
+
+                <!--<div class="text-right p-t-8 p-b-31">-->
+                    <!--<a href="#">-->
+                        <!--Forgot password?-->
+                    <!--</a>-->
+                <!--</div>-->
+
+                <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                        <div class="login100-form-bgbtn"></div>
+                        <button class="login100-form-btn">
+                            Login
+                        </button>
+                    </div>
+                </div>
+
+
+
+                    <a href="/register" class="txt2">
+                        Registreer
+                    </a>
+            </form>
+                </div>
             </form>
         </div>
     </div>
@@ -53,20 +70,4 @@
 
 
 </body>
-
-
-
-
-<!-- Bootstrap core JavaScript -->
-<script src="/node_modules/jquery/dist/jquery.js"></script>
-<script src="/public/bootstrap//js/bootstrap.bundle.js"></script>
-
-<!-- Plugin JavaScript -->
-<script src="/node_modules/jquery-easing/jquery.easing.min.js"></script>
-
-<!-- Custom scripts for this template -->
-<script src="/public/Javascript/index.js"></script>
-
-</body>
-
 </html>
