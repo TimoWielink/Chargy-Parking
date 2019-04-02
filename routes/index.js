@@ -20,6 +20,11 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname+'/pages/register.ejs'));
     });
 
+    app.get('/home', function(req, res) {
+        res.render('pages/home');
+    });
+
+
 
 
     app.get('/template', function(req, res) {
