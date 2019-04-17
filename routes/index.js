@@ -27,6 +27,9 @@ module.exports = function(app) {
         res.render('pages/res');
     });
 
+    app.get("/register", function (req, res) {
+        res.sendfile(__dirname + "/register.html");
+    });
 
 
 
