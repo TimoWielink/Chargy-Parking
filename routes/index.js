@@ -24,6 +24,9 @@ module.exports = function(app) {
         res.render('pages/home');
     });
 
+
+
+
     app.get('/template', function(req, res) {
         res.render('pages/template');
     });
