@@ -1,6 +1,6 @@
 .mfp-planner.standard .mfp-selection
 {
-    background-color:#c71c22;
+    background-color:#ffffff;
 }/**
 * Popup forms styles
 */
@@ -58,8 +58,7 @@
 .mfp-popup.standard a.mfp-button:hover
 {
     color: #fff;
-    background-color: #c71c22;
-    border: solid 1px #8C8C96;
+    border: solid 1px #1be847;
 }
 .mfp-popup.standard .mfp-popup-content .mfp-text-area, 
 .mfp-popup.standard .mfp-popup-content .mfp-text-box, 

@@ -24,7 +24,7 @@
 {
     color: #444;
     box-shadow: 4px 4px 4px rgba(0,0,0,0.35);
-    font-family: Verdana, Arial, Sans-Serif;
+    font-family: Poppins-Medium;
     font-size: 8pt;
     background: #fff;
     border: solid 1px #E2806C;
@@ -358,8 +358,8 @@
 .mfp-month-view.peach .mfp-header,
 .mfp-month-range-view.peach .mfp-header
 {
-    background-color: #E2806C;
-    color: #fff;
+    background-color: #ffffff;
+
 }
 .mfp-month-view.peach .mfp-header .mfp-title,
 .mfp-month-range-view.peach .mfp-header .mfp-title
@@ -373,20 +373,20 @@
 }
 .mfp-month-view.peach .mfp-header .mfp-header-weekdays
 {
-     background-color: #f6be84;
+     background-color: #1be847;
      color: #fff;
      font-size: smaller;
 }
 .mfp-month-view.peach .mfp-header-weeknumbers .mfp-weeknumbers
 {
     color: #fff;
-    background-color: #E2806C;
+    background-color: #1be847;
     text-align: center;
     font-size: smaller;
 }
 .mfp-month-view.peach .mfp-content .mfp-week
 {
-    border-top: 1px solid #f6be84;
+    border-top: 1px solid #1be847;
     background-color: #fff;
 }
 .mfp-month-view.peach .mfp-content .mfp-week:last-child
@@ -399,7 +399,7 @@
 }
 .mfp-month-view.peach .mfp-content .mfp-wrap .mfp-bg-row .mfp-bg-cell
 {
-     border-right: 1px solid #E2806C;
+     border-right: 1px solid #1be847;
 }
 .mfp-month-view.peach .mfp-bg-cell-header
 {
@@ -421,26 +421,26 @@
 .mfp-resource-view.peach .mfp-header
 {
     color: #fff;
-    background-color: #E2806C;
-    border-color:#E2806C;
+    background-color: #1be847;
+    border-color:#1be847;
 }
 .mfp-resource-view.peach .mfp-header-group
 {
     color: #fff;
-    border-color:#E2806C;
-    background-color: #E2806C;
+    border-color:#1be847;
+    background-color: #1be847;
     text-align: center;
     vertical-align: middle;
 }
 .mfp-resource-view.peach .mfp-header-group-wrap > div
 {
-    border-bottom:1px solid #E2806C;
+    border-bottom:1px solid #1be847;
 }
 .mfp-resource-view.peach .mfp-header .mfp-timeline:nth-child(2)
 {
     background-color: #fff;
-    color: #E2806C;
-    border-bottom:1px solid #E2806C;
+    color: #1be847;
+    border-bottom:1px solid #1be847;
 }
 .mfp-resource-view.peach .mfp-header .mfp-timeline:last-child
 {
@@ -454,7 +454,7 @@
 }
 .mfp-resource-view.peach .mfp-header .mfp-timeline div
 {
-    border-right: solid 1px #E2806C;
+    border-right: solid 1px#1be847;
 }
 .mfp-resource-view.peach .mfp-header .mfp-timeline:last-child div
 {
@@ -467,11 +467,11 @@
 }
 .mfp-resource-view.peach .mfp-wrapper .mfp-content .mfp-wrap .mfp-lane-table
 {
-	border-bottom: solid 2px #E2806C;
+	border-bottom: solid 2px #1be847;
 }
 .mfp-resource-view.peach .mfp-wrapper .mfp-content .mfp-wrap .mfp-lane-table tr
 {
-	border-bottom: 1px solid #f6be84;
+	border-bottom: 1px solid #1be847;
 }
 /**
 * Vertical timetable styles
@@ -485,7 +485,7 @@
 }
 .mfp-timetable-view.peach .mfp-header
 {
-    background-color: #E2806C;
+    background-color: #FFFFFF;
     color: #fff;
 }
 .mfp-timetable-view.peach .mfp-header .mfp-title-table tr.mfp-header-row
@@ -495,7 +495,7 @@
 .mfp-timetable-view.peach .mfp-header .mfp-title-table tr.mfp-group-row
 {
     background-color: #fff;
-    color: #E2806C;
+    color: #FFFFFF;
     font-size: smaller;
 }
 .mfp-timetable-view.peach .mfp-header .mfp-title-table tr.mfp-group-row > td
@@ -505,11 +505,11 @@
 .mfp-timetable-view.peach .mfp-header .mfp-title-table tr.mfp-item-row,
 .mfp-timetable-view.peach .mfp-header .mfp-title-table tr.mfp-empty-row
 {
-    background-color: #f6be84;
+    background-color: #1be847;
 }
 .mfp-timetable-view.peach .mfp-header-timeline
 {
-    background-color: #E2806C;
+    background-color: #1be847;
     color: #fff;
 }
 .mfp-timetable-view.peach .mfp-header .mfp-button

@@ -23,6 +23,10 @@ module.exports = function(app) {
     app.get('/home', function(req, res) {
         res.render('pages/home');
     });
+    app.get('/res', function(req, res) {
+        res.render('pages/res');
+    });
+
 
 
 
