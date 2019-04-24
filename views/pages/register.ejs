@@ -24,7 +24,7 @@
 <div class="limiter">
     <div class="container-login100" style="background-image: url('../../public/images/bg-01.jpg');">
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-            <form class="login100-form validate-form" method="post" name="Registerform" id="Registerform">
+            <form class="login100-form validate-form" method="post" name="Registersubmit" id="Registersubmit">
 					<span class="login100-form-title p-b-49">
 					<img src="../../public/Images/logo2.png" alt="logo" id="logo-register">
 					</span>
@@ -52,7 +52,7 @@
                 <div class="container-login100-form-btn">
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
-                        <button class="login100-form-btn">
+                        <button class="login100-form-btn" name="Registersubmit" id="Registersubmit" type="submit">
                             Registreer
                         </button>
                     </div>
@@ -68,19 +68,6 @@
     </div>
 </div>
 </div>
-
-
-
-<script type="text/javascript">
-    $(document).on('submit', 'form.login100-form validate-form', do_registration)
-
-    function do_registration(e) {
-        e.preventDefault()
-        $.get('/your_route', {data: 'goes here'}, function (res) {
-            console.log('callback after your node function is done')
-        })
-    }
-</script>
 
 
 </body>
