@@ -30,4 +30,7 @@ module.exports = function(app) {
     app.get('/day', function(req, res) {
         res.render('pages/day');
     });
+    app.get('/time', function(req, res) {
+        res.render('pages/time');
+    });
 };
