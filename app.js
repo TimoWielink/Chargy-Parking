@@ -3,6 +3,10 @@
 // ================================================================
 // get all the tools we need
 // ================================================================
+
+
+
+
 let express = require('express');
 let routes = require('./routes/index.js');
 let port = process.env.PORT || 1001;
@@ -14,6 +18,7 @@ let session = require('express-session');
 
 var authenticateController=require('./controllers/authenticate-controller');
 var registerController=require('./controllers/register-controller');
+var reservationController=require ('./controllers/reservationController');
 
 // ================================================================
 // setup our express application
@@ -30,6 +35,7 @@ routes(app);
 
 app.post('/register',registerController.register);
 app.post('/login',authenticateController.authenticate);
+app.post('/res', reservationController.insertTime);
 app.post('/controllers/register-controller', registerController.register);
 app.post('/controllers/authenticate-controller', authenticateController.authenticate);
 

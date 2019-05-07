@@ -1,15 +1,57 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>reservations</title>
-    <link href="../../public/res_files/peach.css" rel="stylesheet" />
+    <title>subber</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="../../public/Images/icons/favicon.ico"/>
+
+    <!--===============================================================================================-->
+
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../../public/CSS/util.css">
+    <link rel="stylesheet" type="text/css" href="../../public/CSS/login.css">
+
+    <link href="/public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/CSS/login.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!--===============================================================================================-->
 
 </head>
 <body>
-<div id="calendar" style="position: absolute; width: 100%; height: 100%;"></div>
 
-<script src="../../public/Javascript/MindFusion.Scheduling.js" type="text/javascript"></script>
-<script src="../../public/Javascript/Handler.js" type="text/javascript"></script>
+<div class="limiter">
+    <div class="container-login100" style="background-image: url('../../public/images/bg-01.jpg');">
+        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+            <form class="login100-form validate-form" method="post" name="Registersubmit" id="Registersubmit">
+					<span class="login100-form-title p-b-49">
+					<img src="../../public/Images/logo2.png" alt="logo" id="logo-register">
+					</span>
+
+                <div class="wrap-input100 validate-input m-b-23" data-validate="Username is required">
+                    <span class="label-input100">Begin tijd</span>
+                    <input class="input100" type="text" name="begin" placeholder="begin tijd">
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Password is required">
+                    <span class="label-input100">eind tijd</span>
+                    <input class="input100" name="eind" placeholder="eind tijd">
+                </div>
+
+                <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                        <div class="login100-form-bgbtn"></div>
+                        <button class="login100-form-btn" name="Registersubmit" id="Registersubmit" type="submit">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
 </body>
-
 </html>
