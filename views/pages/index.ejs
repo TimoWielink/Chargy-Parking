@@ -1,42 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <% include ../partials/head %>
+<head>
 
-    <body>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-        <% include ../partials/nav %>
+    <title>Chargy</title>
 
-        <form action="../../public/insertScript.php" method="post">
-            <label> testPrimary :</label>
-            <input type="text" name="testPrimary" id="testPrimary" required="required" placeholder="Please Enter Name"/><br /><br />
-            <label>test1 :</label>
-            <input type="text" name="test1" id="test1" required="required" placeholder="john123@gmail.com"/><br/><br />
-            <label> test2 :</label>
-            <input type="text" name="test2" id="test2" required="required" placeholder="Please Enter Your City"/><br/><br />
-            <label> test3 :</label>
-            <input type="text" name="test3" id="test3" required="required" placeholder="Please Enter Your City"/><br/><br />
-            <input type="submit" value=" Submit " name="submit"/><br />
+    <!-- Bootstrap core CSS -->
+    <link href="/public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-        </form>
+    <!-- Custom fonts for this template -->
+    <link href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
+    <!-- Custom styles for this template -->
+    <link href="/public/CSS/style.css" rel="stylesheet">
 
-        <!--<br>-->
-        <!--<h1>Login</h1>-->
-        <!--<form id="loginForm" method="post">-->
-            <!--<label>Enter your name</label><br>-->
-            <!--<input type="text" class="data-input" name="firstName" placeholder="Enter first name..." required><br>-->
-            <!--<input type="text" class="data-input" name="lastName" placeholder="Enter last name..." required><br>-->
-            <!--<input type="text" class="data-input" name="licensePlate" placeholder="Enter license plate..." required><br>-->
-            <!--<input type="submit" value="Login">-->
-        <!--</form>-->
+</head>
 
-        <% include ../partials/3columns %>
+<body id="page-top">
 
-        <% include ../partials/footer %>
+<!-- Navigation -->
 
-        <% include ../partials/scripts %>
+<% include ../partials/nav.ejs %>
 
-    </body>
+<!-- Header -->
+<header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+            <!--<img id="logo-home" src="/public/Images/logo2.png" alt="Logo" class="img-fluid">-->
+            <h1 class=" mx-auto mt-2 mb-5">Reserveer en vind laadpalen in de buurt van de Amsterdam Arena</h1>
+            <a href="#about" class="btn btn-primary js-scroll-trigger">Registreer nu</a>
+        </div>
+    </div>
+</header>
+
+<!-- About Section -->
+<section id="about" class="about-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h3 class="text-white mb-4">Reserveer een laadpaal</h3>
+                <p class="text-white-50"> Reserveer en vind laadpalen overal rond de Amsterdam Arena.
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/">Registreer nu</a> en begin mer het maken van reserveringen</p>
+            </div>
+        </div>
+        <img src="img/ipad.png" class="img-fluid" alt="">
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section bg-light">
+    <div class="container">
+
+        <!-- Featured Project Row -->
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+            <div class="col-xl-8 col-lg-7">
+                <!--<img class="img-fluid mb-3 mb-lg-0" src="/public/Images/parking.jpg" alt="">-->
+                <video class="img-fluid mb-3 mb-lg-0" src="/public/Images/video1.mov" controls autoplay muted></video>
+            </div>
+            <div class="col-xl-4 col-lg-5">
+                <div class="featured-text text-center text-lg-left">
+                    <h4>Reserveer en Zoek</h4>
+                    <p class="text-black-50 mb-0">U kunt bij onz opzoek gaan naar plekken en plekken reserveren</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project One Row -->
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+            <div class="col-lg-6">
+                <img class="img-fluid" src="/public/Images/parking2.jpg" alt="">
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white">Arena Parkeergarage</h4>
+                            <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Two Row -->
+        <div class="row justify-content-center no-gutters">
+            <div class="col-lg-6">
+                <img class="img-fluid" src="/public/Images/parking.jpg" alt="">
+            </div>
+            <div class="col-lg-6 order-lg-first">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-right">
+                            <h4 class="text-white">Arena Boulevard Parkeergarage</h4>
+                            <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!</p>
+                            <hr class="d-none d-lg-block mb-0 mr-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Signup Section -->
+<section id="signup" class="signup-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+                <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                <h2 class="text-white mb-5">Subscribe</h2>
+
+                <form class="form-inline d-flex">
+                    <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
+                    <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section bg-black">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Address</h4>
+                        <hr class="my-4">
+                        <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-envelope text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Email</h4>
+                        <hr class="my-4">
+                        <div class="small text-black-50">
+                            <a href="#">hello@yourdomain.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Phone</h4>
+                        <hr class="my-4">
+                        <div class="small text-black-50">+1 (555) 902-8832</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="social d-flex justify-content-center">
+            <a href="#" class="mx-2">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="mx-2">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="mx-2">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black small text-center text-white-50">
+    <div class="container">
+        Copyright &copy; <Chargy3></Chargy3> 2019
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="/node_modules/jquery/dist/jquery.js"></script>
+<script src="/public/bootstrap//js/bootstrap.bundle.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="/node_modules/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="/public/Javascript/index.js"></script>
+
+</body>
 
 </html>
