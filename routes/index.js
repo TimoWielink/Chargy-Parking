@@ -16,16 +16,13 @@ module.exports = function(app) {
     app.get('/register', function(req, res) {
         res.render('pages/register');
     });
-    app.get('/register',function(req,res){
-        res.sendFile(path.join(__dirname+'/pages/register.ejs'));
-    });
 
     app.get('/home', function(req, res) {
         res.render('pages/home');
     });
-
-
-
+    app.get('/res', function(req, res) {
+        res.render('pages/res');
+    });
 
     app.get('/template', function(req, res) {
         res.render('pages/template');

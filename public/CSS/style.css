@@ -3,7 +3,7 @@
     font-family: 'Nexa Bold';
     font-style: normal;
     font-weight: normal;
-    src: local('Nexa Bold'), url('/public/NexaBold.woff') format('woff');
+    src: local('Nexa Bold'), url('/public/Fonts/NexaBold.woff') format('woff');
 }
 p.customfont {
     font-family: "My Custom Font", Verdana, Tahoma;
