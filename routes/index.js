@@ -27,4 +27,7 @@ module.exports = function(app) {
     app.get('/template', function(req, res) {
         res.render('pages/template');
     });
+    app.get('/day', function(req, res) {
+        res.render('pages/day');
+    });
 };
