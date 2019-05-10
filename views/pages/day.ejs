@@ -19,6 +19,7 @@
     <!--===============================================================================================-->
 </head>
 <body>
+
 <div id="bg-col-4-2">
 
     <section class="pricing m-5 vertical-center" id="pricing-margin" >
@@ -28,8 +29,9 @@
                 <div class="col-lg-2" >
                     <div class="card  margin-box">
                         <div class="card-body" id="bg-cosl-4">
-                            <h5 class="card-title text-muted text-uppercase text-center">6 mei</h5>
-                            <h6 class="card-price text-center">Maandag<span class="period"></span></h6>
+
+                            <h5 class="card-title text-muted text-uppercase text-center" id="today1"></h5>
+                            <h6 class="card-price text-center" id="today2"><span class="period"></span></h6>
                             <hr>
 
                             <a href="/res" class="btn btn-block btn-primary text-uppercase">kies</a>
@@ -40,8 +42,8 @@
                 <div class="col-lg-2">
                     <div class="card  margin-box">
                         <div class="card-body">
-                            <h5 class="card-title text-muted text-uppercase text-center">7 Mei</h5>
-                            <h6 class="card-price text-center">Dinsdag<span class="period"></span></h6>
+                            <h5 class="card-title text-muted text-uppercase text-center" id="weekdag1">7 Mei</h5>
+                            <h6 class="card-price text-center" id="weekdag2"><span class="period"></span></h6>
                             <hr>
                             <a href="/res" class="btn btn-block btn-primary text-uppercase">Kies</a>
                         </div>
@@ -51,8 +53,8 @@
                 <div class="col-lg-2  margin-box">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title text-muted text-uppercase text-center">8 Mei</h5>
-                            <h6 class="card-price text-center">Woensdag<span class="period"></span></h6>
+                            <h5 class="card-title text-muted text-uppercase text-center" id="weekdag3"></h5>
+                            <h6 class="card-price text-center" id="weekdag4"><span class="period"></span></h6>
                             <hr>
 
                             <a href="/res" class="btn btn-block btn-primary text-uppercase">KIes</a>
@@ -63,8 +65,8 @@
                 <div class="col-lg-2">
                     <div class="card margin-box">
                         <div class="card-body">
-                            <h5 class="card-title text-muted text-uppercase text-center">9 Mei</h5>
-                            <h6 class="card-price text-center">Donderdag<span class="period"></span></h6>
+                            <h5 class="card-title text-muted text-uppercase text-center" id="weekdag5"></h5>
+                            <h6 class="card-price text-center" id="weekdag6"><span class="period"></span></h6>
                             <hr>
 
                             <a href="/res" class="btn btn-block btn-primary text-uppercase">Kies</a>
@@ -75,8 +77,8 @@
                 <div class="col-lg-2">
                     <div class="card margin-box">
                         <div class="card-body">
-                            <h5 class="card-title text-muted text-uppercase text-center">10 Mei</h5>
-                            <h6 class="card-price text-center">Vrijdag<span class="period"></span></h6>
+                            <h5 class="card-title text-muted text-uppercase text-center" id="weekdag7"></h5>
+                            <h6 class="card-price text-center" id="weekdag8"><span class="period"></span></h6>
                             <hr>
                             <a href="/res" class="btn btn-block btn-primary text-uppercase">Kies</a>
                         </div>
@@ -86,8 +88,8 @@
                 <div class="col-lg-2">
                     <div class="card margin-box">
                         <div class="card-body">
-                            <h5 class="card-title text-muted text-uppercase text-center">11 Mei</h5>
-                            <h6 class="card-price text-center">Zaterdag<span class="period"></span></h6>
+                            <h5 class="card-title text-muted text-uppercase text-center" id="weekdag9"></h5>
+                            <h6 class="card-price text-center" id="weekdag10"><span class="period"></span></h6>
                             <hr>
                             <a href="/res" class="btn btn-block btn-primary text-uppercase">Kies</a>
                         </div>
@@ -97,8 +99,8 @@
                 <div class="col-lg-2">
                     <div class="card margin-box">
                         <div class="card-body">
-                            <h5 class="card-title text-muted text-uppercase text-center">12 Mei</h5>
-                            <h6 class="card-price text-center">Zondag<span class="period"></span></h6>
+                            <h5 class="card-title text-muted text-uppercase text-center" id="weekdag11"></h5>
+                            <h6 class="card-price text-center" id="weekdag12"><span class="period"></span></h6>
                             <hr>
                             <a href="/res" class="btn btn-block btn-primary text-uppercase">Kies</a>
                         </div>
@@ -109,10 +111,48 @@
     </section>
 </div>
 
+<script>
+
+    var date = new Date();
+    var dag = date.getDate();
+    var maand = date.getMonth()
+    var week = date.getDay() - 1
+
+
+    var dagen = ["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag","maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"]
+    var maanden = ["jan", "feb", "mar", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
+
+
+
+    console.log(dagen[week].toString())
+
+
+    document.getElementById("today1").innerHTML = dag + " " + maanden[maand];
+    document.getElementById("today2").innerHTML = dagen[week];
+
+    document.getElementById("weekdag1").innerHTML = dag + 1 + " " + maanden[maand]
+    document.getElementById("weekdag2").innerHTML = dagen[week + 1]
+
+    document.getElementById("weekdag3").innerHTML = dag + 2 + " " + maanden[maand]
+    document.getElementById("weekdag4").innerHTML = dagen[week + 2]
+
+    document.getElementById("weekdag5").innerHTML = dag + 3 + " " + maanden[maand]
+    document.getElementById("weekdag6").innerHTML = dagen[week + 3]
+
+    document.getElementById("weekdag7").innerHTML = dag + 4 + " " + maanden[maand]
+    document.getElementById("weekdag8").innerHTML = dagen[week + 4]
+
+    document.getElementById("weekdag9").innerHTML = dag + 5 + " " + maanden[maand]
+    document.getElementById("weekdag10").innerHTML = dagen[week + 5]
+
+    document.getElementById("weekdag11").innerHTML = dag + 6 + " " + maanden[maand]
+    document.getElementById("weekdag12").innerHTML = dagen[week + 6]
 
 
 
 
+
+</script>
 
 <script type="text/javascript">
     /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
