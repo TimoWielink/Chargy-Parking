@@ -116,15 +116,15 @@
     var date = new Date();
     var dag = date.getDate();
     var maand = date.getMonth()
-    var week = date.getDay() - 1
+    var week = date.getDay()
 
 
-    var dagen = ["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag","maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"]
+    var dagen = ["Zondag", "maandag", "Dinsdag", "Donderdag", "vrijdag", "zaterdag", "zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"]
     var maanden = ["jan", "feb", "mar", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
 
 
 
-    console.log(dagen[week])
+    console.log(week)
 
 
     document.getElementById("today1").innerHTML = dag + " " + maanden[maand];
@@ -147,6 +147,8 @@
 
     document.getElementById("weekdag11").innerHTML = dag + 6 + " " + maanden[maand]
     document.getElementById("weekdag12").innerHTML = dagen[week + 6]
+
+
 
 
 
