@@ -18,48 +18,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!--===============================================================================================-->
 
-    <style>
-        .check{
-            background: lightgrey;
-            width: 390px;
-            height: 50px;
-            line-height: 50px;
-            color: white;
-            text-align: center;;
-        }
-        input[type=checkbox] + div {
-            background-color: lightgrey;
-        }
-        input[type=checkbox]:checked + div{
-            background-color: orange;
-            font-style: normal;
-        }
-
-
-
-    </style>
 </head>
 <body>
 
 <div class="limiter">
     <div class="container-login100" style="background-image: url('../../public/images/bg-01.jpg');">
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-            <form class="login100-form validate-form" name="loginForm" id="loginForm" method="post">
+            <form class="login100-form validate-form" method="post" name="Registersubmit" id="Registersubmit">
+					<span class="login100-form-title p-b-49">
+					<img src="../../public/Images/logo2.png" alt="logo" id="logo-register">
+					</span>
 
-                <div class="wrap-input100 validate-input m-b-23" data-validate="Gebruikersnaam is verplicht">
-                    <table>
-                        <tr><th><input type="checkbox" value="01:00"  id="b0" class="check" hidden> <div class="check"><label for="b0">01:00</label></div></th></tr>
-                        <tr><th><input type="checkbox" value="02:00"  id="1" class="check" hidden> <div class="check"><label for="1">02:00</label></div></th></tr>
-                        <tr><th><input type="checkbox" value="03:00"  id="2" class="check" hidden> <div class="check"><label for="2">03:00</label></div></th></tr>
-                        <tr><th><input type="checkbox" value="04:00"  id="3" class="check" hidden> <div class="check"><label for="3">04:00</label></div></th></tr>
-                        <tr><th><input type="checkbox" value="05:00"  id="4" class="check" hidden> <div class="check"><label for="4">05:00</label></div></th></tr>
-                    </table>
+                <div class="wrap-input100 validate-input m-b-23" data-validate="Username is required">
+                    <span class="label-input100">Begin tijd</span>
+                    <input class="input100" type="time" name="begin" placeholder="begin tijd">
                 </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Password is required">
+                    <span class="label-input100">eind tijd</span>
+                    <input class="input100" type="time" name="eind" placeholder="eind tijd">
+                </div>
+
                 <div class="container-login100-form-btn">
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
-                        <button class="login100-form-btn" type="submit" name="login" id="login" onclick="f()">
-                            submit
+                        <button class="login100-form-btn" name="Registersubmit" id="Registersubmit" type="submit">
+                            Submit
                         </button>
                     </div>
                 </div>
@@ -68,30 +52,6 @@
         </div>
     </div>
 </div>
-
-<script>
-
-    // var aantalUren = 5
-    // var arrayChecked = new Array(aantalUren);
-    //
-    // function f() {
-    //
-    //
-    //     for (let i = 0; i < aantalUren ; i++) {
-    //         arrayChecked[i] = document.getElementById(i).checked
-    //
-    //         if (arrayChecked[i] === true){arrayChecked[i] = 1}
-    //
-    //         if (arrayChecked[i] === false){arrayChecked[i] = 0}
-    //     }
-    //     console.log(arrayChecked)
-    // }
-
-
-
-
-
-</script>
 
 </body>
 </html>
