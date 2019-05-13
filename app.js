@@ -3,22 +3,19 @@
 // ================================================================
 // get all the tools we need
 // ================================================================
-
-
-
-
 let express = require('express');
 let routes = require('./routes/index.js');
 let port = process.env.PORT || 1001;
-// let con = require('./config/config');
 let app = express();
+let flash = require('express-flash');
+
 let bodyParser = require('body-parser');
 let session = require('express-session');
 
 
-var authenticateController=require('./controllers/authenticate-controller');
-var registerController=require('./controllers/register-controller');
-var reservationController=require ('./controllers/reservationController');
+let authenticateController=require('./controllers/authenticate-controller');
+let registerController=require('./controllers/register-controller');
+let reservationController=require ('./controllers/reservationController');
 
 // ================================================================
 // setup our express application
@@ -27,6 +24,19 @@ app.use('/public', express.static(process.cwd() + '/public'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+app.use(flash());
+
+
+// ================================================================
+// Session stuff
+// ================================================================
+app.set('trust proxy', 1); // trust first proxy
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: true }
+}));
 
 // ================================================================
 // setup routes
@@ -40,9 +50,12 @@ app.post('/controllers/register-controller', registerController.register);
 app.post('/controllers/authenticate-controller', authenticateController.authenticate);
 
 
+
 // ================================================================
 // start our server
 // ================================================================
 app.listen(port, function () {
     console.log('Server listening on port ' + port + '...');
 });
+
+

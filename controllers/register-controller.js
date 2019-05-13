@@ -1,13 +1,15 @@
-var Cryptr = require('cryptr');
-var express = require("express");
 var con = require('./../config/config');
-cryptr = new Cryptr('myTotalySecretKey');
+
+var passwordHash = require('password-hash');
+
+
 
 module.exports.register = function (req, res) {
-    // var encryptedString = cryptr.encrypt(req.body.password);
+
 
     let username = req.body.username;
-    let password = req.body.password;
+    // let password = req.body.password;
+    let password = passwordHash.generate(req.body.password);
     let email = req.body.email;
     let licensePlate = req.body.licensePlate;
 

@@ -1,46 +1,31 @@
-var Cryptr = require('cryptr');
-cryptr = new Cryptr('myTotalySecretKey');
-
 var con = require('./../config/config');
+passwordHash = require('password-hash');
+
 module.exports.authenticate=function(req,res){
-    var username=req.body.username;
-    var password=req.body.password;
+    let username=req.body.username;
+    let loginPassword=req.body.password;
 
 
     con.query('SELECT * FROM users WHERE username = ?',[username], function (error, results, fields) {
-        if (error) {
-            res.json({
-                status:false,
-                message:'there are some error with query'
-            })
-        }else{
+        if (results[0] && passwordHash.verify(loginPassword, results[0].password)) {
 
-            if(results.length >0){
-                // decryptedString = cryptr.decrypt(results[0].password);
-                if(password==password){
-                    res.json({
-                        status:true,
-                    },res.redirect('/home')
-                )
-                }else{
-                    res.json({
-                        status:false,
-                        message:"Username and password does not match"
-                    });
-                }
-
-            }
-            else{
-                res.json({
-                    status:false,
-                    message:"Username does not exits"
-                });
-            }
+            req.session.regenerate(function () {
+                req.session.login = true;
+                req.session.username = username;
+                req.session.data = results[0];
+                res.redirect('/about')
+                console.log(req.session.username);
+            });
+        } else {
+            req.session.error = 'Incorrect username or password';
+            // res.redirect('pages/login');
+            res.render('pages/login', { error: req.session.error });
+            // delete res.session.error; // remove from further requests
         }
     });
+
 // Voert elke 5 sec een query uit zodat de connectie open blijft (niet idle gaat)
     setInterval(function () {
         con.query('SELECT 1');
     }, 5000);
-
-}
+};

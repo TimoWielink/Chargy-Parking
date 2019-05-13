@@ -1,7 +1,7 @@
-var Cryptr = require('cryptr');
+// var Cryptr = require('cryptr');
 var express = require("express");
 var con = require('./../config/config');
-cryptr = new Cryptr('myTotalySecretKey');
+// cryptr = new Cryptr('myTotalySecretKey');
 
 module.exports.insertTime = function (req, res) {
 
