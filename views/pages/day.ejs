@@ -17,6 +17,7 @@
     <link href="/public/CSS/day.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!--===============================================================================================-->
+
 </head>
 <body>
 
@@ -34,7 +35,7 @@
                             <h6 class="card-price text-center" id="today2"><span class="period"></span></h6>
                             <hr>
 
-                            <a href="/res" class="btn btn-block btn-primary text-uppercase">kies</a>
+                            <a href="/res" class="btn btn-block btn-primary text-uppercase" onclick="day1()">kies</a>
                         </div>
                     </div>
                 </div>
@@ -45,7 +46,7 @@
                             <h5 class="card-title text-muted text-uppercase text-center" id="weekdag1">7 Mei</h5>
                             <h6 class="card-price text-center" id="weekdag2"><span class="period"></span></h6>
                             <hr>
-                            <a href="/res" class="btn btn-block btn-primary text-uppercase">Kies</a>
+                            <a href="/res" class="btn btn-block btn-primary text-uppercase" onclick="day2()">Kies</a>
                         </div>
                     </div>
                 </div>
@@ -57,7 +58,7 @@
                             <h6 class="card-price text-center" id="weekdag4"><span class="period"></span></h6>
                             <hr>
 
-                            <a href="/res" class="btn btn-block btn-primary text-uppercase">KIes</a>
+                            <a href="/res" class="btn btn-block btn-primary text-uppercase" onclick="day3()">KIes</a>
                         </div>
                     </div>
                 </div>
@@ -69,7 +70,7 @@
                             <h6 class="card-price text-center" id="weekdag6"><span class="period"></span></h6>
                             <hr>
 
-                            <a href="/res" class="btn btn-block btn-primary text-uppercase">Kies</a>
+                            <a href="/res" class="btn btn-block btn-primary text-uppercase" onclick="day4()">Kies</a>
                         </div>
                     </div>
                 </div>
@@ -80,7 +81,7 @@
                             <h5 class="card-title text-muted text-uppercase text-center" id="weekdag7"></h5>
                             <h6 class="card-price text-center" id="weekdag8"><span class="period"></span></h6>
                             <hr>
-                            <a href="/res" class="btn btn-block btn-primary text-uppercase">Kies</a>
+                            <a href="/res" class="btn btn-block btn-primary text-uppercase" onclick="day5()">Kies</a>
                         </div>
                     </div>
                 </div>
@@ -91,7 +92,7 @@
                             <h5 class="card-title text-muted text-uppercase text-center" id="weekdag9"></h5>
                             <h6 class="card-price text-center" id="weekdag10"><span class="period"></span></h6>
                             <hr>
-                            <a href="/res" class="btn btn-block btn-primary text-uppercase">Kies</a>
+                            <a href="/res" class="btn btn-block btn-primary text-uppercase" onclick="day6()">Kies</a>
                         </div>
                     </div>
                 </div>
@@ -100,9 +101,9 @@
                     <div class="card margin-box">
                         <div class="card-body">
                             <h5 class="card-title text-muted text-uppercase text-center" id="weekdag11"></h5>
-                            <h6 class="card-price text-center" id="weekdag12"><span class="period"></span></h6>
+                            <h6 class="card-price text-center" id="weekdag12"><span class="period" onclick="day7()"></span></h6>
                             <hr>
-                            <a href="/res" class="btn btn-block btn-primary text-uppercase">Kies</a>
+                            <a href="/res" class="btn btn-block btn-primary text-uppercase" onclick="day7()">Kies</a>
                         </div>
                     </div>
                 </div>
@@ -113,19 +114,19 @@
 
 <script>
 
+
     var date = new Date();
     var dag = date.getDate();
     var maand = date.getMonth()
     var week = date.getDay()
+    var year = date.getFullYear()
 
+    var datum = dag + 1 + "-" + maand + "-" + year
 
-    var dagen = ["Zondag", "maandag", "Dinsdag", "Donderdag", "vrijdag", "zaterdag", "zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"]
+    var dagen = ["Zondag", "maandag", "Dinsdag", "Woesndag", "Donderdag", "vrijdag", "zaterdag", "zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"]
     var maanden = ["jan", "feb", "mar", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
 
-
-
     console.log(week)
-
 
     document.getElementById("today1").innerHTML = dag + " " + maanden[maand];
     document.getElementById("today2").innerHTML = dagen[week];
@@ -147,6 +148,45 @@
 
     document.getElementById("weekdag11").innerHTML = dag + 6 + " " + maanden[maand]
     document.getElementById("weekdag12").innerHTML = dagen[week + 6]
+
+    function day1() {
+        datum = dag + "-" + maand + "-" + year
+        localStorage.setItem("date", datum)
+        localStorage.setItem("dag", week)
+    }
+    function day2() {
+
+        datum = dag + 1 + "-" + maand + "-" + year
+        localStorage.setItem("date", datum)
+        localStorage.setItem("dag", week + 1)
+    }
+    function day3() {
+        datum = dag + 2 + "-" + maand + "-" + year
+        localStorage.setItem("date", datum)
+        localStorage.setItem("dag", week + 2)
+    }
+    function day4() {
+        datum = dag + 3 + "-" + maand + "-" + year
+        localStorage.setItem("date", datum)
+        localStorage.setItem("dag", week + 3)
+    }
+    function day5() {
+        datum = dag + 4 + "-" + maand + "-" + year
+        localStorage.setItem("date", datum)
+        localStorage.setItem("dag", week + 4)
+    }
+    function day6() {
+        datum = dag + 5 + "-" + maand + "-" + year
+        localStorage.setItem("date", datum)
+        localStorage.setItem("dag", week + 5)
+    }
+    function day7() {
+        datum = dag + 6 + "-" + maand + "-" + year
+        localStorage.setItem("date", datum)
+        localStorage.setItem("dag", week + 6)
+    }
+
+
 
 
 

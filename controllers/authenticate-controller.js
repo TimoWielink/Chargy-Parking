@@ -13,8 +13,10 @@ module.exports.authenticate=function(req,res){
                 req.session.login = true;
                 req.session.username = username;
                 req.session.data = results[0];
-                res.redirect('/about')
+                res.redirect('/home');
                 console.log(req.session.username);
+
+
             });
         } else {
             req.session.error = 'Incorrect username or password';
