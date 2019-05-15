@@ -34,8 +34,10 @@
                             <h5 class="card-title text-muted text-uppercase text-center" id="today1"></h5>
                             <h6 class="card-price text-center" id="today2"><span class="period"></span></h6>
                             <hr>
-
-                            <a href="/res" class="btn btn-block btn-primary text-uppercase" onclick="day1()">kies</a>
+                            <form method="post">
+                            <a  class="btn btn-block btn-primary text-uppercase" onclick="day1()" type="submit" methods="post">kies</a>
+                                <input type="text" id="a" hidden>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -121,12 +123,15 @@
     var week = date.getDay()
     var year = date.getFullYear()
 
-    var datum = dag + 1 + "-" + maand + "-" + year
+    // var datum = dag + 1 + "-" + maand + "-" + year
+    var datum = year + "-" + maand + "-" + (dag + 1)
 
     var dagen = ["Zondag", "maandag", "Dinsdag", "Woesndag", "Donderdag", "vrijdag", "zaterdag", "zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"]
     var maanden = ["jan", "feb", "mar", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
 
     console.log(week)
+
+    document.getElementById("a").value = year + "-" + (maand + 1) + "-" + (dag + 1)
 
     document.getElementById("today1").innerHTML = dag + " " + maanden[maand];
     document.getElementById("today2").innerHTML = dagen[week];
@@ -150,38 +155,38 @@
     document.getElementById("weekdag12").innerHTML = dagen[week + 6]
 
     function day1() {
-        datum = dag + "-" + maand + "-" + year
+        datum = year + "-" + maand + "-" + dag
         localStorage.setItem("date", datum)
         localStorage.setItem("dag", week)
     }
     function day2() {
 
-        datum = dag + 1 + "-" + maand + "-" + year
+        datum = year + "-" + maand + "-" + (dag + 1)
         localStorage.setItem("date", datum)
         localStorage.setItem("dag", week + 1)
     }
     function day3() {
-        datum = dag + 2 + "-" + maand + "-" + year
+        datum = year + "-" + maand + "-" + (dag + 2)
         localStorage.setItem("date", datum)
         localStorage.setItem("dag", week + 2)
     }
     function day4() {
-        datum = dag + 3 + "-" + maand + "-" + year
+        datum = year + "-" + maand + "-" + (dag + 3)
         localStorage.setItem("date", datum)
         localStorage.setItem("dag", week + 3)
     }
     function day5() {
-        datum = dag + 4 + "-" + maand + "-" + year
+        datum = year + "-" + maand + "-" + (dag + 4)
         localStorage.setItem("date", datum)
         localStorage.setItem("dag", week + 4)
     }
     function day6() {
-        datum = dag + 5 + "-" + maand + "-" + year
+        datum = year + "-" + maand + "-" + (dag + 5)
         localStorage.setItem("date", datum)
         localStorage.setItem("dag", week + 5)
     }
     function day7() {
-        datum = dag + 6 + "-" + maand + "-" + year
+        datum = year + "-" + maand + "-" + (dag + 6)
         localStorage.setItem("date", datum)
         localStorage.setItem("dag", week + 6)
     }

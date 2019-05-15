@@ -6,33 +6,33 @@ module.exports.insertTime = function (req, res) {
 
     // var arrayChecked = new Array(aantalUren);
 
-    let a = req.body.a;
-    let b = req.body.b;
-    let c = req.body.c;
-    let d = req.body.d;
-    let e = req.body.e;
-    let f = req.body.fa;
-    let g = req.body.g;
-    let h = req.body.p;
-    let i = req.body.i;
-    let j = req.body.k;
-    let k = req.body.l;
-    let l = req.body.m;
-    let m = req.body.qq;
-    let n = req.body.y;
-    let o = req.body.fab;
-    let p = req.body.leaf;
-    let q = req.body.backdrop;
-    let r = req.body.s;
-    let s = req.body.cache;
-    let t = req.body.calendar;
-    let u = req.body.calculator;
-    let v = req.body.fadeIn;
-    let w = req.body.vaadin;
-    let x = req.body.valHooks;
+    // let a = req.body.a;
+    // let b = req.body.b;
+    // let c = req.body.c;
+    // let d = req.body.d;
+    // let e = req.body.e;
+    // let f = req.body.fa;
+    // let g = req.body.g;
+    // let h = req.body.p;
+    // let i = req.body.i;
+    // let j = req.body.k;
+    // let k = req.body.l;
+    // let l = req.body.m;
+    // let m = req.body.qq;
+    // let n = req.body.y;
+    // let o = req.body.fab;
+    // let p = req.body.leaf;
+    // let q = req.body.backdrop;
+    // let r = req.body.s;
+    // let s = req.body.cache;
+    // let t = req.body.calendar;
+    // let u = req.body.calculator;
+    // let v = req.body.fadeIn;
+    // let w = req.body.vaadin;
+    // let x = req.body.valHooks;
 
-    let from = req.body.fadeToggle;
-    let to = req.body.fadeOut;
+    let from = req.body.jedi;
+    let to = req.body.java;
 
 
 
@@ -43,9 +43,11 @@ module.exports.insertTime = function (req, res) {
     console.log(to);
 
     let person = localStorage.getItem("user");
-    console.log("reservation storage = " + person);
-    let insert = "UPDATE resTime SET from_time = ?, to_time = ? WHERE email =" + " 'oz@oz.nl'";
-    con.query(insert, [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x], function (error) {
+    let datum = localStorage.getItem("date");
+    console.log("realshit" + datum);
+
+    let insert = "UPDATE resTime SET datum = ?, from_time = ?, to_time = ? WHERE email = ?";
+    con.query(insert, [datum,from,to,person], function (error) {
 
         if (error) throw error;
         console.log("1 record inserted");
@@ -56,6 +58,6 @@ module.exports.insertTime = function (req, res) {
         con.query('SELECT 1');
     }, 5000);
 
-    res.redirect('/home');
+    // res.redirect('/home');
 
 };
