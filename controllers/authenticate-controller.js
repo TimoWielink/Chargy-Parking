@@ -1,6 +1,9 @@
 var con = require('./../config/config');
 passwordHash = require('password-hash');
 
+var LocalStorage = require('node-localstorage').LocalStorage,
+    localStorage = new LocalStorage('./scratch');
+
 module.exports.authenticate=function(req,res){
     let username=req.body.username;
     let loginPassword=req.body.password;
@@ -11,20 +14,13 @@ module.exports.authenticate=function(req,res){
     con.query('SELECT * FROM users WHERE username = ?',[username], function (error, results, fields) {
         if (results[0] && passwordHash.verify(loginPassword, results[0].password)) {
 
-            req.session.regenerate(function () {
-                req.session.login = true;
-                req.session.username = username;
-                req.session.data = results[0];
-                res.redirect('/home');
-                console.log(req.session.username);
+            res.redirect('/home');
 
-
-            });
+            localStorage.setItem("user", username);
+            console.log("LocalStorage username = " + localStorage.getItem("user"));
         } else {
             req.session.error = 'Incorrect username or password';
-            // res.redirect('pages/login');
             res.render('pages/login', { error: req.session.error });
-            // delete res.session.error; // remove from further requests
         }
     });
 

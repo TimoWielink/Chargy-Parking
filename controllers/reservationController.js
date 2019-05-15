@@ -1,6 +1,6 @@
-// var Cryptr = require('cryptr');
 var con = require('./../config/config');
-// cryptr = new Cryptr('myTotalySecretKey');
+var LocalStorage = require('node-localstorage').LocalStorage,
+    localStorage = LocalStorage('./scratch');
 
 module.exports.insertTime = function (req, res) {
 
@@ -42,9 +42,10 @@ module.exports.insertTime = function (req, res) {
     console.log(from);
     console.log(to);
 
-
-    let insert = "UPDATE resTime SET from_time = ?, to_time = ? WHERE email = 'oz@oz.nl'";
-    con.query(insert, [from,to], function (error) {
+    let person = localStorage.getItem("user");
+    console.log("reservation storage = " + person);
+    let insert = "UPDATE resTime SET from_time = ?, to_time = ? WHERE email =" + " 'oz@oz.nl'";
+    con.query(insert, [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x], function (error) {
 
         if (error) throw error;
         console.log("1 record inserted");

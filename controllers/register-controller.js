@@ -8,7 +8,6 @@ module.exports.register = function (req, res) {
 
 
     let username = req.body.username;
-    // let password = req.body.password;
     let password = passwordHash.generate(req.body.password);
     let email = req.body.email;
     let licensePlate = req.body.k;
@@ -36,5 +35,5 @@ module.exports.register = function (req, res) {
         con.query('SELECT 1');
     }, 5000);
 
-    res.redirect('/home');
+    res.redirect('/login');
 };
