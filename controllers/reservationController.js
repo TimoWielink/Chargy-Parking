@@ -1,5 +1,4 @@
 // var Cryptr = require('cryptr');
-var express = require("express");
 var con = require('./../config/config');
 // cryptr = new Cryptr('myTotalySecretKey');
 
@@ -32,7 +31,7 @@ module.exports.insertTime = function (req, res) {
     let w = req.body.vaadin;
     let x = req.body.valHooks;
 
-    let from = req.body.fadeIn;
+    let from = req.body.fadeToggle;
     let to = req.body.fadeOut;
 
 
@@ -40,10 +39,12 @@ module.exports.insertTime = function (req, res) {
     // let insert = "UPDATE resTime SET t01 = ?, t02 = ?,t03 = ?,t04 = ?, t05 = ?, t06 = ?, t07 = ?, t08 = ?, t09 = ?, t10 = ?, t11 = ?, t12 = ?, t13 = ?, t14 = ?, t15 = ?, t16 = ?, t17 = ?, t18 = ?, t19 = ?, t20 = ?, t21 = ?, t22 = ?, t23 = ?, t00 = ? WHERE email = 'oz@oz.nl'";
     // con.query(insert, [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x], function (error) {
 
+    console.log(from);
+    console.log(to);
 
 
     let insert = "UPDATE resTime SET from_time = ?, to_time = ? WHERE email = 'oz@oz.nl'";
-    con.query(insert, [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x], function (error) {
+    con.query(insert, [from,to], function (error) {
 
         if (error) throw error;
         console.log("1 record inserted");

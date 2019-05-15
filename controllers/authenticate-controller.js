@@ -6,6 +6,8 @@ module.exports.authenticate=function(req,res){
     let loginPassword=req.body.password;
 
 
+
+
     con.query('SELECT * FROM users WHERE username = ?',[username], function (error, results, fields) {
         if (results[0] && passwordHash.verify(loginPassword, results[0].password)) {
 
