@@ -32,7 +32,7 @@ module.exports.insertTime = function (req, res) {
     // let x = req.body.valHooks;
 
     let from = req.body.jedi;
-    let to = req.body.java;
+    let till = req.body.java;
 
 
 
@@ -40,24 +40,25 @@ module.exports.insertTime = function (req, res) {
     // con.query(insert, [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x], function (error) {
 
     console.log(from);
-    console.log(to);
+    console.log(till);
 
     let person = localStorage.getItem("user");
     let datum = localStorage.getItem("date");
-    console.log("realshit" + datum);
+    console.log("Reservation controller date: " + datum);
 
-    let insert = "UPDATE resTime SET datum = ?, from_time = ?, to_time = ? WHERE email = ?";
-    con.query(insert, [datum,from,to,person], function (error) {
+    let resTimeUpdate = "UPDATE resTime SET datum = ?, from_time = ?, to_time = ? WHERE email = ?";
+    con.query(resTimeUpdate, [datum,from,till,person], function (error) {
 
         if (error) throw error;
         console.log("1 record inserted");
+        res.redirect('/home');
 
     });
 
+    // Voert elke 5 sec een query uit zodat de connectie open blijft (niet idle gaat)
     setInterval(function () {
         con.query('SELECT 1');
     }, 5000);
 
-    // res.redirect('/home');
 
 };

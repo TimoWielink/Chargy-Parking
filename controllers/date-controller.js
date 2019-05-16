@@ -1,9 +1,9 @@
 var con = require('./../config/config');
-passwordHash = require('password-hash');
 
 var LocalStorage = require('node-localstorage').LocalStorage,
     localStorage = new LocalStorage('./scratch');
 
+// sets "date" from local storage
 module.exports.dateinput=function(req,res){
 
     let date1 = req.body.a;

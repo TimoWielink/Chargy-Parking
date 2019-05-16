@@ -3,7 +3,7 @@ var con = require('./../config/config');
 var passwordHash = require('password-hash');
 
 
-
+// Get data from the registration form and send it to database
 module.exports.register = function (req, res) {
 
 
@@ -12,8 +12,8 @@ module.exports.register = function (req, res) {
     let email = req.body.email;
     let licensePlate = req.body.k;
 
-    let statement = "INSERT INTO `users` (username, password, email, licensePlate) VALUES (?, ?, ?, ?)";
-    con.query(statement, [username, password, email, licensePlate], function (error, results, fields) {
+    let userInsert = "INSERT INTO `users` (username, password, email, licensePlate) VALUES (?, ?, ?, ?)";
+    con.query(userInsert, [username, password, email, licensePlate], function (error, results, fields) {
 
         if (error) throw error;
         console.log("1 record inserted");
@@ -22,8 +22,8 @@ module.exports.register = function (req, res) {
 
     ///--------------------------------INSERT INTO RESTIME---------------------------------------------------------
 
-    let aa = "INSERT INTO `resTime` (email) VALUES (?)";
-    con.query(aa, [username], function (error, results, fields) {
+    let resTimeInsert = "INSERT INTO `resTime` (email) VALUES (?)";
+    con.query(resTimeInsert, [username], function (error, results, fields) {
 
         if (error) throw error;
         console.log("1 record inserted");

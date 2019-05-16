@@ -54,9 +54,6 @@ app.post('/controllers/authenticate-controller', authenticateController.authenti
 app.post('/day',datecontroller.dateinput);
 
 
-
-
-
 // ================================================================
 // start our server
 // ================================================================

@@ -4,15 +4,14 @@ passwordHash = require('password-hash');
 var LocalStorage = require('node-localstorage').LocalStorage,
     localStorage = new LocalStorage('./scratch');
 
+
+// Authenticates if credentials are known in DB and correct
 module.exports.authenticate=function(req,res){
     let username=req.body.username;
-    let loginPassword=req.body.password;
-
-
-
+    let enteredPassword=req.body.password;
 
     con.query('SELECT * FROM users WHERE username = ?',[username], function (error, results, fields) {
-        if (results[0] && passwordHash.verify(loginPassword, results[0].password)) {
+        if (results[0] && passwordHash.verify(enteredPassword, results[0].password)) {
 
             res.redirect('/home');
 
