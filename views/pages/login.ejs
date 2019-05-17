@@ -49,7 +49,7 @@
                 <div class="container-login100-form-btn">
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
-                        <button class="login100-form-btn" type="submit" name="login" id="login">
+                        <button class="login100-form-btn" type="submit" name="login" id="login" onclick="f()">
                             Login
                         </button>
                     </div>
@@ -61,7 +61,19 @@
             </form>
     </div>
 </div>
+</div>
 
+<script>
+
+    function f() {
+        let username = document.getElementById("username").value
+        console.log(username)
+        localStorage.setItem("user", username)
+    }
+
+
+
+</script>
 
 </body>
 </html>

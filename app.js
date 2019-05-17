@@ -9,6 +9,7 @@ let port = process.env.PORT || 1001;
 let app = express();
 let flash = require('express-flash');
 
+
 let bodyParser = require('body-parser');
 let session = require('express-session');
 
@@ -16,6 +17,8 @@ let session = require('express-session');
 let authenticateController=require('./controllers/authenticate-controller');
 let registerController=require('./controllers/register-controller');
 let reservationController=require ('./controllers/reservationController');
+let datecontroller=require('./controllers/date-controller');
+
 
 // ================================================================
 // setup our express application
@@ -48,10 +51,7 @@ app.post('/login',authenticateController.authenticate);
 app.post('/res', reservationController.insertTime);
 app.post('/controllers/register-controller', registerController.register);
 app.post('/controllers/authenticate-controller', authenticateController.authenticate);
-
-app.post('/time', function(req,res){
-    res.redirect('/day');
-});
+app.post('/day',datecontroller.dateinput);
 
 
 // ================================================================

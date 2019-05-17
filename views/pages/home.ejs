@@ -84,6 +84,8 @@
 
 
 <script type="text/javascript">
+
+
     /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
     (function(d, m){
         var kommunicateSettings = {"appId":"2aa45cec699ba77ad70fb70b80de6f881","popupWidget":true,"conversationTitle":"Timo Wielink","automaticChatOpenOnNavigation":true};
@@ -92,6 +94,8 @@
         var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
         window.kommunicate = m; m._globals = kommunicateSettings;
     })(document, window.kommunicate || {});
+
+    alert("welkom: " + localStorage.getItem("user"))
 </script>
 </body>
 </html>

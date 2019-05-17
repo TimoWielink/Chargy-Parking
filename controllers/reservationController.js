@@ -1,34 +1,64 @@
-// var Cryptr = require('cryptr');
-var express = require("express");
 var con = require('./../config/config');
-// cryptr = new Cryptr('myTotalySecretKey');
+var LocalStorage = require('node-localstorage').LocalStorage,
+    localStorage = LocalStorage('./scratch');
 
 module.exports.insertTime = function (req, res) {
 
     // var arrayChecked = new Array(aantalUren);
 
-    var b1 = req.body.b0;
+    // let a = req.body.a;
+    // let b = req.body.b;
+    // let c = req.body.c;
+    // let d = req.body.d;
+    // let e = req.body.e;
+    // let f = req.body.fa;
+    // let g = req.body.g;
+    // let h = req.body.p;
+    // let i = req.body.i;
+    // let j = req.body.k;
+    // let k = req.body.l;
+    // let l = req.body.m;
+    // let m = req.body.qq;
+    // let n = req.body.y;
+    // let o = req.body.fab;
+    // let p = req.body.leaf;
+    // let q = req.body.backdrop;
+    // let r = req.body.s;
+    // let s = req.body.cache;
+    // let t = req.body.calendar;
+    // let u = req.body.calculator;
+    // let v = req.body.fadeIn;
+    // let w = req.body.vaadin;
+    // let x = req.body.valHooks;
 
-    console.log(req.body.b0);
+    let from = req.body.jedi;
+    let till = req.body.java;
 
 
-    // var insert = "UPDATE resTime SET t0100 = ?, t0200 = ?, t0300= ?, t0400 = ?, t0500 = ?, t0600 = ?";
-    // con.query(insert, [arrayChecked[0],arrayChecked[1],arrayChecked[2],arrayChecked[3],arrayChecked[4]], function (error) {
-    //
 
-    var insert = "UPDATE resTime SET t0100 = ?";
-    con.query(insert, [b1], function (error) {
+    // let insert = "UPDATE resTime SET t01 = ?, t02 = ?,t03 = ?,t04 = ?, t05 = ?, t06 = ?, t07 = ?, t08 = ?, t09 = ?, t10 = ?, t11 = ?, t12 = ?, t13 = ?, t14 = ?, t15 = ?, t16 = ?, t17 = ?, t18 = ?, t19 = ?, t20 = ?, t21 = ?, t22 = ?, t23 = ?, t00 = ? WHERE email = 'oz@oz.nl'";
+    // con.query(insert, [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x], function (error) {
 
+    console.log(from);
+    console.log(till);
+
+    let person = localStorage.getItem("user");
+    let datum = localStorage.getItem("date");
+    console.log("Reservation controller date: " + datum);
+
+    let resTimeUpdate = "UPDATE resTime SET datum = ?, from_time = ?, to_time = ? WHERE email = ?";
+    con.query(resTimeUpdate, [datum,from,till,person], function (error) {
 
         if (error) throw error;
         console.log("1 record inserted");
+        res.redirect('/home');
 
     });
 
+    // Voert elke 5 sec een query uit zodat de connectie open blijft (niet idle gaat)
     setInterval(function () {
         con.query('SELECT 1');
     }, 5000);
 
-    res.redirect('/home');
 
 };

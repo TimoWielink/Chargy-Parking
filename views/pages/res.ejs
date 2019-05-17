@@ -35,7 +35,11 @@
             font-style: normal;
         }
 
-
+        .tim{
+            position: static;
+            text-align: center;
+            width: 405px;
+        }
 
     </style>
 </head>
@@ -47,18 +51,60 @@
             <form class="login100-form validate-form" name="loginForm" id="loginForm" method="post">
 
                 <div class="wrap-input100 validate-input m-b-23" data-validate="Gebruikersnaam is verplicht">
+
+                    <h5 class="tim" id="today1"> tot</h5>
+                    <h6 class="tim" id="today2"> van</h6>
+                    <br>
+
+                    <p>van</p><input class="tim" type="time" id="jedi" name="jedi" min="0" max="24" placeholder="0">
+                    <p>tot</p><input class="tim" type="time" id="java" name="java" min="0" max="24" placeholder="0">
+                    <br>
+
                     <table>
-                        <tr><th><input type="checkbox" value="01:00"  id="b0" class="check" hidden> <div class="check"><label for="b0">01:00</label></div></th></tr>
-                        <tr><th><input type="checkbox" value="02:00"  id="1" class="check" hidden> <div class="check"><label for="1">02:00</label></div></th></tr>
-                        <tr><th><input type="checkbox" value="03:00"  id="2" class="check" hidden> <div class="check"><label for="2">03:00</label></div></th></tr>
-                        <tr><th><input type="checkbox" value="04:00"  id="3" class="check" hidden> <div class="check"><label for="3">04:00</label></div></th></tr>
-                        <tr><th><input type="checkbox" value="05:00"  id="4" class="check" hidden> <div class="check"><label for="4">05:00</label></div></th></tr>
+
+
+                        <tr><th><input type="checkbox"   id="valHooks" name="valHooks" class="check" hidden> <div class="check"><label for="valHooks">00:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="a" name="a" class="check" hidden> <div class="check"><label for="a">01:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="b" name="b" class="check" hidden> <div class="check"><label for="b">02:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="c" name="c" class="check" hidden> <div class="check"><label for="c">03:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="d" name="d" class="check" hidden> <div class="check"><label for="d">04:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="e" name="e" class="check" hidden> <div class="check"><label for="e">05:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="fa" name="fa" class="check" hidden> <div class="check"><label for="fa">06:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="g" name="g" class="check" hidden> <div class="check"><label for="g">07:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="p" name="p" class="check" hidden> <div class="check"><label for="p">08:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="i" name="i" class="check" hidden> <div class="check"><label for="i">09:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="k" name="k" class="check" hidden> <div class="check"><label for="k">10:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="l" name="l" class="check" hidden> <div class="check"><label for="l">11:00</label></div></th></tr>
+
+                        <tr><th><input type="checkbox"   id="m" name="m" class="check" hidden> <div class="check"><label for="m">12:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="qq" name="11" class="check" hidden> <div class="check"><label for="qq">13:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="y" name="y" class="check" hidden> <div class="check"><label for="y">14:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="fab" name="fab" class="check" hidden> <div class="check"><label for="fab">15:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="leaf" name="leaf" class="check" hidden> <div class="check"><label for="leaf">16:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="backdrop" name="backdrop" class="check" hidden> <div class="check"><label for="backdrop">17:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="s" name="s" class="check" hidden> <div class="check"><label for="s">18:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="cache" name="cache" class="check" hidden> <div class="check"><label for="cache">19:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="calendar" name="calendar" class="check" hidden> <div class="check"><label for="calendar">20:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="calculator" name="calculator" class="check" hidden> <div class="check"><label for="calculator">21:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="fadeIn" name="fadeIn" class="check" hidden> <div class="check"><label for="fadeIn">22:00</label></div></th></tr>
+                        <tr><th><input type="checkbox"   id="vaadin" name="vaadin" class="check" hidden> <div class="check"><label for="vaadin">23:00</label></div></th></tr>
+
+
+
+                        <!--<tr> <input class="input100" type="checkbox" id="a" name="a" hidden></tr>-->
+                        <!--<tr><th> <input  type="checkbox" id="" name="" > 01:00</th></tr>-->
+                        <!--<tr><th> <input  type="checkbox" id="c" name="c" > 02:00</th></tr>-->
+                        <!--<tr><th> <input  type="checkbox" id="d" name="d" > 03:00</th></tr>-->
+
+
+
+
                     </table>
                 </div>
                 <div class="container-login100-form-btn">
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
-                        <button class="login100-form-btn" type="submit" name="login" id="login" onclick="f()">
+                        <button class="login100-form-btn" type="submit" name="login" id="login">
                             submit
                         </button>
                     </div>
@@ -86,6 +132,30 @@
     //     }
     //     console.log(arrayChecked)
     // }
+
+
+    var date = new Date();
+    var dag = date.getDate();
+    var maand = date.getMonth()
+    var week = localStorage.getItem("dag")
+
+
+
+    var dagen = ["Zondag", "maandag", "Dinsdag", "woensdag", "Donderdag", "vrijdag", "zaterdag"]
+
+    //TODO Is die tweede rij dagen nodig? If so -> uncomment, if not -> delete commented dagen
+        // , "zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"]
+
+
+    var maanden = ["jan", "feb", "mar", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
+
+    document.getElementById("today1").innerHTML = localStorage.getItem("date")
+    document.getElementById("today2").innerHTML = dagen[week]
+    // document.getElementById("today2").innerHTML = dagen[week];
+    // console.log(localStorage.getItem("date"))
+    // console.log(localStorage.getItem("dag"))
+    // console.log(localStorage.getItem("user"))
+
 
 
 
