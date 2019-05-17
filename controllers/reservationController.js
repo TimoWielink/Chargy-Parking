@@ -33,27 +33,30 @@ module.exports.insertTime = function (req, res) {
 
     let from = req.body.jedi;
     let till = req.body.java;
-
+    let date = req.body.a;
 
 
     // let insert = "UPDATE resTime SET t01 = ?, t02 = ?,t03 = ?,t04 = ?, t05 = ?, t06 = ?, t07 = ?, t08 = ?, t09 = ?, t10 = ?, t11 = ?, t12 = ?, t13 = ?, t14 = ?, t15 = ?, t16 = ?, t17 = ?, t18 = ?, t19 = ?, t20 = ?, t21 = ?, t22 = ?, t23 = ?, t00 = ? WHERE email = 'oz@oz.nl'";
     // con.query(insert, [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x], function (error) {
 
-    console.log(from);
-    console.log(till);
 
     let person = localStorage.getItem("user");
-    let datum = localStorage.getItem("date");
-    console.log("Reservation controller date: " + datum);
+    // let datum = localStorage.getItem("date");
+
+
+
 
     let resTimeUpdate = "UPDATE resTime SET datum = ?, from_time = ?, to_time = ? WHERE email = ?";
-    con.query(resTimeUpdate, [datum,from,till,person], function (error) {
+    con.query(resTimeUpdate, [date,from,till,person], function (error) {
 
         if (error) throw error;
         console.log("1 record inserted");
         res.redirect('/home');
+        console.log("Reservation controller date: " + date);
 
     });
+
+
 
     // Voert elke 5 sec een query uit zodat de connectie open blijft (niet idle gaat)
     setInterval(function () {

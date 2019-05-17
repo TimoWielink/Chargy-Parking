@@ -58,6 +58,7 @@
 
                     <p>van</p><input class="tim" type="time" id="jedi" name="jedi" min="0" max="24" placeholder="0">
                     <p>tot</p><input class="tim" type="time" id="java" name="java" min="0" max="24" placeholder="0">
+                    <input id="a" name="a" type="date" hidden >
                     <br>
 
                     <table>
@@ -135,13 +136,12 @@
 
 
     var date = new Date();
-    var dag = date.getDate();
-    var maand = date.getMonth()
     var week = localStorage.getItem("dag")
 
 
+    document.getElementById("a").value = localStorage.getItem("date")
 
-    var dagen = ["Zondag", "maandag", "Dinsdag", "woensdag", "Donderdag", "vrijdag", "zaterdag"]
+    var dagen = ["Zondag", "maandag", "Dinsdag", "woensdag", "Donderdag", "vrijdag", "zaterdag","zondag","maandag","dinsdag","woensdag","Donderdag","vrijdag","zaterdag","zondag"]
 
     //TODO Is die tweede rij dagen nodig? If so -> uncomment, if not -> delete commented dagen
         // , "zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"]
@@ -151,6 +151,8 @@
 
     document.getElementById("today1").innerHTML = localStorage.getItem("date")
     document.getElementById("today2").innerHTML = dagen[week]
+
+    // console.log(localStorage.getItem("date"))
     // document.getElementById("today2").innerHTML = dagen[week];
     // console.log(localStorage.getItem("date"))
     // console.log(localStorage.getItem("dag"))

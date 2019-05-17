@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login V4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="../../public/Images/icons/favicon.ico"/>
+
+    <!--===============================================================================================-->
+
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../../public/CSS/util.css">
+    <link rel="stylesheet" type="text/css" href="../../public/CSS/login.css">
+
+    <link href="/public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/CSS/login.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!--===============================================================================================-->
+
+</head>
+<body>
+
+<div class="limiter">
+    <div class="container-login100" style="background-image: url('../../public/images/bg-01.jpg');">
+        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+            <form class="login100-form validate-form" method="post" name="Registersubmi" id="Registersubmi">
+					<span class="login100-form-title p-b-49">
+					<img src="../../public/Images/logo2.png" alt="logo" id="logo-register">
+					</span>
+
+
+
+                <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                        <div class="login100-form-bgbtn"></div>
+                        <button class="login100-form-btn" name="Registersubmi" id="Registersubmi" type="submit" onclick="f()">
+                            Registreer
+                        </button>
+                    </div>
+                </div>
+                <a href="/login" class="txt2">
+                    Login
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    var con = require('./../config/config');
+    passwordHash = require('password-hash');
+
+    var LocalStorage = require('node-localstorage').LocalStorage,
+        localStorage = new LocalStorage('./scratch');
+
+    function f() {
+
+
+
+
+// Authenticates if credentials are known in DB and correct
+
+            let username = localStorage.getItem("user");
+            console.log(username);
+
+            con.query('SELECT * FROM resTime WHERE email = ?',[username], function (error, results, fields) {
+                if (results[0]) {
+
+                    console.log(results)
+                } else {
+                    console.log("error")
+                }
+            });
+
+// Voert elke 5 sec een query uit zodat de connectie open blijft (niet idle gaat)
+            setInterval(function () {
+                con.query('SELECT 1');
+            }, 5000);
+
+    }
+</script>
+</body>
+</html>

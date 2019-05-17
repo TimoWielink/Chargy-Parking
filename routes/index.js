@@ -33,4 +33,7 @@ module.exports = function(app) {
     app.get('/time', function(req, res) {
         res.render('pages/time');
     });
+    app.get('/myRes', function(req, res) {
+        res.render('pages/myRes');
+    });
 };
