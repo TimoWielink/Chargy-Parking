@@ -49,6 +49,9 @@ app.post('/res', reservationController.insertTime);
 app.post('/controllers/register-controller', registerController.register);
 app.post('/controllers/authenticate-controller', authenticateController.authenticate);
 
+app.post('/time', function(req,res){
+    res.redirect('/day');
+});
 
 
 // ================================================================

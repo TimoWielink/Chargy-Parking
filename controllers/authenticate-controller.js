@@ -13,7 +13,7 @@ module.exports.authenticate=function(req,res){
                 req.session.login = true;
                 req.session.username = username;
                 req.session.data = results[0];
-                res.redirect('/about')
+                res.redirect('/time')
                 console.log(req.session.username);
             });
         } else {

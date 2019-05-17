@@ -15,99 +15,47 @@
 
     <link href="/public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/public/CSS/time.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="/public/CSS/button.scss">
+
+
     <!--===============================================================================================-->
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'/>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
 </head>
 <body>
-<div id="bg-col-4-2">
+<% include ../partials/nav.ejs %>
+<header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+            <h1>Goedemorgen Timo,</h1>
+            <h2>Maak een Reservering</h2>
+            <br>
+            <br>
+            <br>
 
-    <section class="pricing m-5 vertical-center" id="pricing-margin" >
-        <div class="container" >
-            <div class="row" >
-                <!-- Free Tier -->
-                <div class="col-lg-12" >
-                    <div class="card mb-5 mb-lg-0">
-                        <div class="card-body" id="bg-cosl-4">
-                            <h5 class="card-title text-muted text-uppercase text-center">Tijd selecteren</h5>
-                            <h6 class="card-price text-center">Hoe laat wilt u parkeren<span class="period"></span></h6>
-                            <hr>
-                            <div class="col-md-6">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group bootstrap-timepicker">
-                                            <label class="control-label">Start Time</label>
-                                            <input id="start" name="start" ng-model="start" type="text" required="required" class="form-control start" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group bootstrap-timepicker">
-                                            <label class="control-label">End Time</label>
-                                            <input id="end" name="end" ng-model="end" type="text" required="required" class="form-control end" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="/day" class="btn btn-block btn-primary text-uppercase">reserveer</a>
-                        </div>
-                    </div>
-                </div>
+            <button type="button" class="btn btn-primary" id="button-clivk" type="submit" >Reserveer een plek</button>
 
-            </div>
+
+
         </div>
-    </section>
+    </div>
+</header>
+<div class="wrapper">
+
+    <div id='map'></div>
 </div>
 
 
-
-
-
-
-<script type="text/javascript">
-
-    $('.start, .end').timepicker({
-        showInputs: false,
-        minuteStep: 1,
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoidGltb3dpZWxpbmsiLCJhIjoiY2ptZ3BzN3RzMHpqYTN2cGZqYXF1bjNmZSJ9.eAX3yLCUNCOMTnP8yDUjEw';
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/timowielink/cjvf0mzh30e1h1fpakkls1z05',
+        center: [4.945266, 52.311687],
+        zoom: 14.7
     });
-    $( "#end, #start" ).change(function() {
-
-        var time = $("#start").val();
-        var hours = Number(time.match(/^(\d+)/)[1]);
-        var minutes = Number(time.match(/:(\d+)/)[1]);
-        var AMPM = time.match(/\s(.*)$/)[1];
-        if(AMPM == "PM" && hours<12) hours = hours+12;
-        if(AMPM == "AM" && hours==12) hours = hours-12;
-        var sHours = hours.toString();
-        var sMinutes = minutes.toString();
-        if(hours<10) sHours = "0" + sHours;
-        if(minutes<10) sMinutes = "0" + sMinutes;
-        var time2 = $("#end").val();
-        if(time2=="")
-        {
-            var time2 = "00:00 AM";
-        }
-        var hours2 = Number(time2.match(/^(\d+)/)[1]);
-        var minutes2 = Number(time2.match(/:(\d+)/)[1]);
-        var AMPM2 = time2.match(/\s(.*)$/)[1];
-        if(AMPM2 == "PM" && hours2<12) hours2 = hours2+12;
-        if(AMPM2 == "AM" && hours2==12) hours2 = hours2-12;
-        var sHours2 = hours2.toString();
-        var sMinutes2 = minutes2.toString();
-        if(hours2<10) sHours2 = "0" + sHours2;
-        if(minutes2<10) sMinutes2 = "0" + sMinutes2;
-//alert(sHours + ":" + sMinutes);
-        var comparehour = sHours2-sHours;
-        var comparemin = sMinutes2-sMinutes;
-        if(comparehour<0)
-        {
-            $("#end").val(time);
-        }
-        else if((comparehour==0) && (comparemin<0))
-        {
-            $("#end").val(time);
-        }
-    });
-
-
 </script>
+
 </body>
 </html>
