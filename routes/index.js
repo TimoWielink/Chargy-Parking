@@ -1,5 +1,4 @@
 'use strict';
-
 module.exports = function(app) {
     app.get('/', function(req, res) {
         res.render('pages/index');
@@ -34,7 +33,9 @@ module.exports = function(app) {
         res.render('pages/time');
     });
     app.get('/myRes', function(req, res) {
-        res.render('pages/myRes');
+        res.render('pages/myRes',{
+            name:"asss"
+        });
 
     });
 };

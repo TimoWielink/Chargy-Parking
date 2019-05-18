@@ -10,16 +10,17 @@ let app = express();
 let flash = require('express-flash');
 
 
-
 let bodyParser = require('body-parser');
 let session = require('express-session');
+
+let LocalStorage = require('node-localstorage').LocalStorage,
+    localStorage = new LocalStorage('./scratch');
 
 
 let authenticateController=require('./controllers/authenticate-controller');
 let registerController=require('./controllers/register-controller');
 let reservationController=require ('./controllers/reservationController');
 let myResController=require('./controllers/myRes-controller');
-
 
 
 // ================================================================
@@ -53,9 +54,9 @@ app.post('/login',authenticateController.authenticate);
 app.post('/res', reservationController.insertTime);
 app.post('/controllers/register-controller', registerController.register);
 app.post('/controllers/authenticate-controller', authenticateController.authenticate);
-app.post('/myRes', myResController.getRes);
+app.post('/myRes',  myResController.getRes);
 
-
+app.locals.aaaa = "result";
 
 
 // ================================================================
