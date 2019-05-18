@@ -1,8 +1,9 @@
-var con = require('./../config/config');
+let con = require('./../config/config');
 passwordHash = require('password-hash');
 
-var LocalStorage = require('node-localstorage').LocalStorage,
+let LocalStorage = require('node-localstorage').LocalStorage,
     localStorage = new LocalStorage('./scratch');
+
 
 
 // Authenticates if credentials are known in DB and correct
@@ -10,14 +11,23 @@ module.exports.getRes=function(req,res){
     let username = localStorage.getItem("user");
     console.log(username);
 
-    con.query('SELECT * FROM resTime WHERE email = ?',[username], function (error, results, fields) {
-        if (results[0]) {
 
+    con.query('SELECT * FROM resTime WHERE email = ?',[username], function (error, results, rows) {
+       if (error) throw error;
+        if (results.length > 0) {
+            res.json(results);
             console.log(results)
         }else {
-            console.log("error")
+            results = null;
+            console.log("error: maybe null")
         }
+
     });
+
+
+
+
+    // give EJS file the data
 
 // Voert elke 5 sec een query uit zodat de connectie open blijft (niet idle gaat)
     setInterval(function () {

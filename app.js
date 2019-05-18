@@ -10,6 +10,7 @@ let app = express();
 let flash = require('express-flash');
 
 
+
 let bodyParser = require('body-parser');
 let session = require('express-session');
 
@@ -53,6 +54,7 @@ app.post('/res', reservationController.insertTime);
 app.post('/controllers/register-controller', registerController.register);
 app.post('/controllers/authenticate-controller', authenticateController.authenticate);
 app.post('/myRes', myResController.getRes);
+
 
 
 

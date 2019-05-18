@@ -35,5 +35,6 @@ module.exports = function(app) {
     });
     app.get('/myRes', function(req, res) {
         res.render('pages/myRes');
+
     });
 };
