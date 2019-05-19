@@ -13,7 +13,7 @@ module.exports.authenticate=function(req,res){
     con.query('SELECT * FROM users WHERE username = ?',[username], function (error, results, fields) {
         if (results[0] && passwordHash.verify(enteredPassword, results[0].password)) {
 
-            res.redirect('/home');
+            res.redirect('/time');
 
             localStorage.setItem("user", username);
             console.log("LocalStorage username = " + localStorage.getItem("user"));
