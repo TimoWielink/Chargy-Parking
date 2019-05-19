@@ -24,7 +24,7 @@ module.exports.insertTime = function (req, res) {
 
         if (error) throw error;
         console.log("1 record inserted");
-        res.redirect('/home');
+        res.redirect('/time');
         console.log("Reservation controller date: " + date);
 
     });

@@ -12,7 +12,7 @@ let user;
 // Authenticates if credentials are known in DB and correct
 module.exports.getRes = function (req, res) {
     // let username = localStorage.getItem("user");
-    let username = 'oz@oz.nl';
+    let username = localStorage.getItem("user");
     console.log(username);
 
 
@@ -29,10 +29,12 @@ module.exports.getRes = function (req, res) {
 
                 var resultArray = Object.values(JSON.parse(JSON.stringify(results)));
                 resultArray.forEach(function(getString) {
-                    console.log(getString)
-                    console.log(getString.from_time)
-                    console.log(getString.to_time)
+                    console.log(getString);
+                    console.log(getString.from_time);
+                    console.log(getString.to_time);
+
                     res.render('pages/myRes', {
+                        name: "",
                         fromTime: getString.from_time,
                         toTime: getString.to_time
                     })
@@ -43,6 +45,8 @@ module.exports.getRes = function (req, res) {
                 console.log("error: maybe null")
             }
         }
+
+
 
 
         // give EJS file the data

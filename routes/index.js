@@ -29,7 +29,14 @@ module.exports = function(app) {
         res.render('pages/home');
     });
     app.get('/res', function(req, res) {
-        res.render('pages/res');
+        res.render('pages/res',{
+            set: "hidden",
+            login: "",
+            regist: "",
+            myRes: "my reservation",
+            profile: "profile",
+            loguit: "log uit"
+        });
     });
 
     app.get('/template', function(req, res) {
@@ -51,17 +58,28 @@ module.exports = function(app) {
 
 
     app.get('/profile', function(req, res) {
-        res.render('pages/profile');
+        res.render('pages/profile',{
+            set: "hidden",
+            login: "",
+            regist: "",
+            myRes: "my reservation",
+            profile: "profile",
+            loguit: "log uit"
+        });
     });
 
 
 
     app.get('/myRes', function(req, res) {
+
         res.render('pages/myRes',{
             name:"asss",
             fromTime:"Click the button below to ",
             toTime:"show your reservations"
         });
+
+
+
 
     });
 };
