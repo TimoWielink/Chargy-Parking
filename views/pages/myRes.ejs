@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>myRes</title>
+    <title>Login V4</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -14,53 +14,52 @@
     <link rel="stylesheet" type="text/css" href="../../public/CSS/login.css">
 
     <link href="/public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/public/CSS/login.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link href="/public/CSS/time.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/CSS/button.scss">
+
+
     <!--===============================================================================================-->
-
-    <script>
-
-    </script>
-
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'/>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
 </head>
 <body>
+<% include ../partials/nav.ejs %>
+<header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+            <h1>Reserveringen </h1>
+            <h2>Maak een Reservering</h2>
+            <br>
+            <br>
+            <p id="pl"><%= name%></p>
 
-
-<div class="limiter">
-    <div class="container-login100" style="background-image: url('../../public/images/bg-01.jpg');">
-        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-            <form class="login100-form validate-form" method="post" name="Registersubmi" id="Registersubmi">
-					<span class="login100-form-title p-b-49">
-					<img src="../../public/Images/logo2.png" alt="logo" id="logo-register">
-					</span>
-
-                <title id="title" name="title"></title>
-
-                <h6 id="a" name="a" value="">SHOW RESULT DOWN HERE:</h6>
-                <p id="pl"><%= name%></p>
-
-                <p id="pl"><%=JSON.stringify(fromTime)%> <%=JSON.stringify(toTime)%></p>
-
-
-                <div class="container-login100-form-btn">
-                    <div class="wrap-login100-form-btn">
-                        <div class="login100-form-bgbtn"></div>
-                        <button class="login100-form-btn" name="Registersubmi" id="Registersubmi" type="submit">
-                            skiitttt3000
-                        </button>
-                    </div>
-                </div>
+            <form method="post" name="Registersubmi" id="Registersubmi">
+            <p id="pl"><%=JSON.stringify(fromTime)%> <%=JSON.stringify(toTime)%></p>
+            <button  class="btn btn-primary" id="Registersubmi" name="Registersubmi" type="submit" >uw reservaties</button>
             </form>
+
+
         </div>
     </div>
+</header>
+<div class="wrapper">
+
+    <div id='map'></div>
 </div>
+
 
 <script>
 
 
-
+    mapboxgl.accessToken = 'pk.eyJ1IjoidGltb3dpZWxpbmsiLCJhIjoiY2ptZ3BzN3RzMHpqYTN2cGZqYXF1bjNmZSJ9.eAX3yLCUNCOMTnP8yDUjEw';
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/timowielink/cjvf0mzh30e1h1fpakkls1z05',
+        center: [4.945266, 52.311687],
+        zoom: 14.7
+    });
 </script>
-
 
 </body>
 </html>

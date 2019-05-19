@@ -13,7 +13,7 @@
                     <a class="nav-link js-scroll-trigger" href="#about">PAD</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#projects">Parkeren</a>
+                    <a class="nav-link js-scroll-trigger" href="#projects" onclick="l()" <%= parkeren%> >Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="/register" <%= set%>><%= regist%></a>
@@ -28,15 +28,31 @@
                     <a class="nav-link js-scroll-trigger" href="/profile" ><%= profile%></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" onclick="f()" ><%= loguit%></a>
+                    <a class="nav-link js-scroll-trigger"  onclick="f()" ><%= loguit%></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" <%= verwijder%> onclick="z()"> verwijder account</a>
                 </li>
             </ul>
         </div>
     </div>
     <script>
         function f() {
-            
+            alert("KECH")
+            localStorage.removeItem("user")
+            location.href = "/"
         }
+
+        function l(){
+            location.href = "/time"
+        }
+
+        function z() {
+            alert("zeker weten?")
+        }
+
+
+
     </script>
 
 </nav>

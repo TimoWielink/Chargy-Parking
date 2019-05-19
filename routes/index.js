@@ -4,6 +4,8 @@ var LocalStorage = require('node-localstorage').LocalStorage,
 module.exports = function(app) {
     app.get('/', function(req, res) {
         res.render('pages/index',{
+            verwijder: "hidden",
+            parkeren: "hidden",
             set: "",
             login: "login",
             regist: "register",
@@ -30,6 +32,8 @@ module.exports = function(app) {
     });
     app.get('/res', function(req, res) {
         res.render('pages/res',{
+            verwijder: "",
+            parkeren: "",
             set: "hidden",
             login: "",
             regist: "",
@@ -47,6 +51,8 @@ module.exports = function(app) {
     });
     app.get('/time', function(req, res) {
         res.render('pages/time',{
+            verwijder: "",
+            parkeren: "",
             set: "hidden",
             login: "",
             regist: "",
@@ -59,6 +65,8 @@ module.exports = function(app) {
 
     app.get('/profile', function(req, res) {
         res.render('pages/profile',{
+            verwijder: "",
+            parkeren: "",
             set: "hidden",
             login: "",
             regist: "",
@@ -75,7 +83,15 @@ module.exports = function(app) {
         res.render('pages/myRes',{
             name:"asss",
             fromTime:"Click the button below to ",
-            toTime:"show your reservations"
+            toTime:"show your reservations",
+            verwijder: "",
+            parkeren: "",
+            set: "hidden",
+            login: "",
+            regist: "",
+            myRes: "my reservation",
+            profile: "profile",
+            loguit: "log uit"
         });
 
 

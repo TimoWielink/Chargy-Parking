@@ -29,11 +29,11 @@
     <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto text-center">
             <h1>Goedemorgen </h1> <h1 id="fra"> herres</h1>
-            <h2>Maak een Reservering</h2>
+            <h2>stoutert</h2>
             <br>
             <br>
 
-            <button type="button" class="btn btn-primary" id="button-clivk" type="submit" >Reserveer een plek</button>
+            <button type="button" class="btn btn-primary" id="button" type="submit" onclick="k()" >Reserveer een plek</button>
 
 
 
@@ -48,6 +48,12 @@
 
 <script>
     document.getElementById("fra").innerHTML = localStorage.getItem("user")
+
+    function k(){
+        location.href = "/day"
+    }
+
+
     mapboxgl.accessToken = 'pk.eyJ1IjoidGltb3dpZWxpbmsiLCJhIjoiY2ptZ3BzN3RzMHpqYTN2cGZqYXF1bjNmZSJ9.eAX3yLCUNCOMTnP8yDUjEw';
     const map = new mapboxgl.Map({
         container: 'map',

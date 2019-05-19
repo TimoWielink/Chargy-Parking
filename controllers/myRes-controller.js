@@ -36,7 +36,15 @@ module.exports.getRes = function (req, res) {
                     res.render('pages/myRes', {
                         name: "",
                         fromTime: getString.from_time,
-                        toTime: getString.to_time
+                        toTime: getString.to_time,
+                        verwijder: "",
+                        parkeren: "",
+                        set: "hidden",
+                        login: "",
+                        regist: "",
+                        myRes: "my reservation",
+                        profile: "profile",
+                        loguit: "log uit"
                     })
                 });
 
