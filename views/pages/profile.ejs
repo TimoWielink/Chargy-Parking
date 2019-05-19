@@ -50,7 +50,7 @@
             </div>
             <div class="col-md-6">
                 <div class="profile-head">
-                    <h5>
+                    <h5 id="setU">
                        Timo Wielink
                     </h5>
                     <h6>
@@ -94,7 +94,7 @@
                                 <label>Gebruikersnaam</label>
                             </div>
                             <div class="col-md-6">
-                                <p>TimoWielink</p>
+                                <p id="setUs">TimoWielink</p>
                             </div>
                         </div>
                         <div class="row">
@@ -184,6 +184,10 @@
     </form>
 </div>
 
+<script>
+document.getElementById("setU").innerHTML = localStorage.getItem("user")
+document.getElementById("setUs").innerHTML = localStorage.getItem("user")
+</script>
 
 
 
