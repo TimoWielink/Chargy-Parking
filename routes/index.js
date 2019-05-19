@@ -58,7 +58,9 @@ module.exports = function(app) {
 
     app.get('/myRes', function(req, res) {
         res.render('pages/myRes',{
-            name:"asss"
+            name:"asss",
+            fromTime:"Click the button below to ",
+            toTime:"show your reservations"
         });
 
     });
