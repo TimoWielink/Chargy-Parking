@@ -28,7 +28,7 @@
 <header class="masthead">
     <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto text-center">
-            <h1>Goedemorgen Timo,</h1>
+            <h1>Goedemorgen </h1> <h1 id="fra"> herres</h1>
             <h2>Maak een Reservering</h2>
             <br>
             <br>
@@ -47,6 +47,7 @@
 
 
 <script>
+    document.getElementById("fra").innerHTML = localStorage.getItem("user")
     mapboxgl.accessToken = 'pk.eyJ1IjoidGltb3dpZWxpbmsiLCJhIjoiY2ptZ3BzN3RzMHpqYTN2cGZqYXF1bjNmZSJ9.eAX3yLCUNCOMTnP8yDUjEw';
     const map = new mapboxgl.Map({
         container: 'map',

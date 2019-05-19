@@ -10,10 +10,17 @@ module.exports.authenticate=function(req,res){
     let username=req.body.username;
     let enteredPassword=req.body.password;
 
+    const myRes = "My reservations";
+    const loguit = "log uit";
+    const profile = "profile";
+
     con.query('SELECT * FROM users WHERE username = ?',[username], function (error, results, fields) {
         if (results[0] && passwordHash.verify(enteredPassword, results[0].password)) {
 
             res.redirect('/time');
+            localStorage.setItem("profile", profile);
+            localStorage.setItem("loguit", loguit);
+            localStorage.setItem("myRes", myRes);
 
             localStorage.setItem("user", username);
             console.log("LocalStorage username = " + localStorage.getItem("user"));

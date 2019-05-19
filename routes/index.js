@@ -1,7 +1,16 @@
 'use strict';
+var LocalStorage = require('node-localstorage').LocalStorage,
+    localStorage = LocalStorage('./scratch');
 module.exports = function(app) {
     app.get('/', function(req, res) {
-        res.render('pages/index');
+        res.render('pages/index',{
+            set: "",
+            login: "login",
+            regist: "register",
+            myRes: "",
+            profile: "",
+            loguit: ""
+        });
     });
 
     app.get('/about', function(req, res) {
@@ -30,16 +39,20 @@ module.exports = function(app) {
         res.render('pages/day');
     });
     app.get('/time', function(req, res) {
-        res.render('pages/time');
+        res.render('pages/time',{
+            set: "hidden",
+            login: "",
+            regist: "",
+            myRes: "my reservation",
+            profile: "profile",
+            loguit: "log uit"
+        });
     });
 
 
     app.get('/profile', function(req, res) {
         res.render('pages/profile');
     });
-
-
-
 
 
 
