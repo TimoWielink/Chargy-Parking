@@ -4,33 +4,6 @@ var LocalStorage = require('node-localstorage').LocalStorage,
 
 module.exports.insertTime = function (req, res) {
 
-    // var arrayChecked = new Array(aantalUren);
-
-    // let a = req.body.a;
-    // let b = req.body.b;
-    // let c = req.body.c;
-    // let d = req.body.d;
-    // let e = req.body.e;
-    // let f = req.body.fa;
-    // let g = req.body.g;
-    // let h = req.body.p;
-    // let i = req.body.i;
-    // let j = req.body.k;
-    // let k = req.body.l;
-    // let l = req.body.m;
-    // let m = req.body.qq;
-    // let n = req.body.y;
-    // let o = req.body.fab;
-    // let p = req.body.leaf;
-    // let q = req.body.backdrop;
-    // let r = req.body.s;
-    // let s = req.body.cache;
-    // let t = req.body.calendar;
-    // let u = req.body.calculator;
-    // let v = req.body.fadeIn;
-    // let w = req.body.vaadin;
-    // let x = req.body.valHooks;
-
     let from = req.body.jedi;
     let till = req.body.java;
     let date = req.body.a;
@@ -63,5 +36,19 @@ module.exports.insertTime = function (req, res) {
         con.query('SELECT 1');
     }, 5000);
 
+
+
+    //---------------------------------------------------------------------------------------------------------------------
+    const accountSid = 'ACf77fa76b5fd41dd528fbe269ca785ba4';
+    const authToken = 'f72a77cdb69ba36750825e527fa440e2';
+    const client = require('twilio')(accountSid, authToken);
+
+    client.messages
+        .create({
+            body: 'Er is zojuist een reservering gemaakt op u naam. Open de app om de reservering te bekijken',
+            from: '+31 97014201853',
+            to: '+31648444810'
+        })
+        .then(message => console.log(message.sid));
 
 };

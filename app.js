@@ -21,7 +21,6 @@ let authenticateController=require('./controllers/authenticate-controller');
 let registerController=require('./controllers/register-controller');
 let reservationController=require ('./controllers/reservationController');
 let myResController=require('./controllers/myRes-controller');
-let sendsms=require('send_sms');
 
 
 // ================================================================
@@ -56,10 +55,8 @@ app.post('/res', reservationController.insertTime);
 app.post('/controllers/register-controller', registerController.register);
 app.post('/controllers/authenticate-controller', authenticateController.authenticate);
 app.post('/myRes',  myResController.getRes);
-app.post('/sendsms',sendsms.sender);
 
 
-app.locals.aaaa = "result";
 
 
 // ================================================================
