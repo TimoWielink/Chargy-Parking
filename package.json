@@ -42,7 +42,8 @@
     "password-hash": "^1.2.2",
     "popper": "^1.0.1",
     "popper.js": "^1.14.7",
-    "query-string": "^6.5.0"
+    "query-string": "^6.5.0",
+    "twilio": "^3.31.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.7.2",

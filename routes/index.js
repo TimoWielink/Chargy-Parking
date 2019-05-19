@@ -37,6 +37,14 @@ module.exports = function(app) {
     app.get('/profile', function(req, res) {
         res.render('pages/profile');
     });
+
+    app.get('/send', function(req, res) {
+        res.render('send_sms');
+    });
+
+
+
+
     app.get('/myRes', function(req, res) {
         res.render('pages/myRes',{
             name:"asss"
