@@ -38,9 +38,7 @@ module.exports = function(app) {
         res.render('pages/profile');
     });
 
-    app.get('/send', function(req, res) {
-        res.render('send_sms');
-    });
+
 
 
 
