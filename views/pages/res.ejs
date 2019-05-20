@@ -147,19 +147,22 @@
             if(document.getElementById(i).checked == true){
                 counter++
                 selecthigh[counter -1] = document.getElementById(i).value
-
                getId[counter] = document.getElementById(i).id
-                // console.log(getId[counter])
-
             }
-
-
 
         }
 
         let minId = getId[getId.length - getId.length + 1]
 
         let maxId = getId[getId.length - 1]
+
+        for (let i = 0; i < maxId ; i++) {
+            if (i > minId){
+                document.getElementById(i).checked = true
+            }
+        }
+
+
 
 
         console.log("SELECT MIN ID: " + getId[getId.length - getId.length + 1])
