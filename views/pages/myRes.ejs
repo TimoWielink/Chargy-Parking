@@ -34,8 +34,11 @@
             <br>
             <p id="pl"><%= name%></p>
 
+            <p id="pl"><%= datum%></p>
+
             <form method="post" name="Registersubmi" id="Registersubmi">
-            <p id="pl"><%=JSON.stringify(fromTime)%> <%=JSON.stringify(toTime)%></p>
+            <p id="pl">van: <%=fromTime%></p>
+                <p>tot: <%=toTime%></p>
             <button  class="btn btn-primary" id="Registersubmi" name="Registersubmi" type="submit" >uw reservaties</button>
             </form>
 

@@ -82,6 +82,7 @@ module.exports = function(app) {
 
         res.render('pages/myRes',{
             name:"asss",
+            datum: "empty",
             fromTime:"Click the button below to ",
             toTime:"show your reservations",
             verwijder: "",
@@ -95,7 +96,10 @@ module.exports = function(app) {
         });
 
 
-
-
     });
+
+    app.get('/verwijder', function (req,res) {
+        res.render('pages/verwijder')
+    })
+
 };

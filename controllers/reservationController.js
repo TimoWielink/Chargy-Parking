@@ -4,9 +4,10 @@ var LocalStorage = require('node-localstorage').LocalStorage,
 
 module.exports.insertTime = function (req, res) {
 
+    let date = req.body.a;
     let from = req.body.jedi;
     let till = req.body.java;
-    let date = req.body.a;
+
 
 
     // let insert = "UPDATE resTime SET t01 = ?, t02 = ?,t03 = ?,t04 = ?, t05 = ?, t06 = ?, t07 = ?, t08 = ?, t09 = ?, t10 = ?, t11 = ?, t12 = ?, t13 = ?, t14 = ?, t15 = ?, t16 = ?, t17 = ?, t18 = ?, t19 = ?, t20 = ?, t21 = ?, t22 = ?, t23 = ?, t00 = ? WHERE email = 'oz@oz.nl'";
@@ -19,13 +20,16 @@ module.exports.insertTime = function (req, res) {
 
 
 
+    // let resTimeUpdate = "INSERT INTO resTime (email,datum , from_time , to_time) VALUES (?,?,?,?)";
     let resTimeUpdate = "UPDATE resTime SET datum = ?, from_time = ?, to_time = ? WHERE email = ?";
-    con.query(resTimeUpdate, [date,from,till,person], function (error) {
+    con.query(resTimeUpdate, [date,from,till, person], function (error) {
 
         if (error) throw error;
         console.log("1 record inserted");
         res.redirect('/time');
         console.log("Reservation controller date: " + date);
+        console.log("Reservation from time: " + from);
+        console.log("Reservation till time: " + till);
 
     });
 
@@ -39,16 +43,16 @@ module.exports.insertTime = function (req, res) {
 
 
     //---------------------------------------------------------------------------------------------------------------------
-    const accountSid = 'ACf77fa76b5fd41dd528fbe269ca785ba4';
-    const authToken = 'f72a77cdb69ba36750825e527fa440e2';
-    const client = require('twilio')(accountSid, authToken);
-
-    client.messages
-        .create({
-            body: 'Er is zojuist een reservering gemaakt op u naam. Open de app om de reservering te bekijken',
-            from: '+31 97014201853',
-            to: '+31648444810'
-        })
-        .then(message => console.log(message.sid));
+    // const accountSid = 'ACf77fa76b5fd41dd528fbe269ca785ba4';
+    // const authToken = 'f72a77cdb69ba36750825e527fa440e2';
+    // const client = require('twilio')(accountSid, authToken);
+    //
+    // client.messages
+    //     .create({
+    //         body: 'Er is zojuist een reservering gemaakt op u naam. Open de app om de reservering te bekijken',
+    //         from: '+31 97014201853',
+    //         to: '+31648444810'
+    //     })
+    //     .then(message => console.log(message.sid));
 
 };

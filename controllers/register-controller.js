@@ -14,7 +14,6 @@ module.exports.register = function (req, res) {
 
     let userInsert = "INSERT INTO `users` (username, password, email, licensePlate) VALUES (?, ?, ?, ?)";
     con.query(userInsert, [username, password, email, licensePlate], function (error, results, fields) {
-        res.redirect('/');
         if (error) throw error;
         console.log("1 record inserted");
 

@@ -14,18 +14,21 @@ module.exports.getRes = function (req, res) {
     let username = localStorage.getItem("user");
     console.log(username);
 
-    con.query("SELECT * FROM resTime WHERE email = ?", [username], function (error, results, rows) {
+    con.query("SELECT *, DATE_FORMAT(datum, '%d/%m/%Y') AS nicedate FROM resTime WHERE email = ?", [username], function (error, results, rows) {
             if (error) throw error;
             if (results.length > 0) {
 
                 let resultArray = Object.values(JSON.parse(JSON.stringify(results)));
-                resultArray.forEach(function(getString) {
+                resultArray.forEach(function (getString) {
                     console.log(getString);
                     console.log(getString.from_time);
                     console.log(getString.to_time);
+                    console.log(getString.nicedate);
+
 
                     res.render('pages/myRes', {
                         name: username,
+                        datum: getString.nicedate,
                         fromTime: getString.from_time,
                         toTime: getString.to_time,
                         verwijder: "",
@@ -38,6 +41,7 @@ module.exports.getRes = function (req, res) {
                         loguit: "log uit"
                     })
                 });
+
 
             } else {
                 let nullFromTime = "No reservation";

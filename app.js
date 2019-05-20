@@ -21,6 +21,7 @@ let authenticateController=require('./controllers/authenticate-controller');
 let registerController=require('./controllers/register-controller');
 let reservationController=require ('./controllers/reservationController');
 let myResController=require('./controllers/myRes-controller');
+let verwijderAccController=require('./controllers/verwijderAccController');
 
 
 // ================================================================
@@ -55,6 +56,7 @@ app.post('/res', reservationController.insertTime);
 app.post('/controllers/register-controller', registerController.register);
 app.post('/controllers/authenticate-controller', authenticateController.authenticate);
 app.post('/myRes',  myResController.getRes);
+app.post('/verwijder', verwijderAccController.delete);
 
 
 
