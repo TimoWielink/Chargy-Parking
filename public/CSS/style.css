@@ -328,8 +328,10 @@ footer {
 .text_2 {
     animation: text2;
 }
-
-.text_1, .text_2 {
+.text_3 {
+    animation: text3;
+}
+.text_1, .text_2, text_3 {
     overflow: hidden;
     white-space: nowrap;
     display: inline-block;
@@ -359,6 +361,14 @@ footer {
 }
 
 @keyframes text1 {
+      0%, 50%, 100% {
+          width: 0;
+      }
+      10%, 40% {
+          width: 10em;
+      }
+  }
+@keyframes text3 {
     0%, 50%, 100% {
         width: 0;
     }
