@@ -158,9 +158,9 @@
 
 
     function day1() {
-        datum = year + "-" + maand + "-" + dag
+        datum = year + "/" + maand + "/" + dag
         if (maand < 10){
-            datum = year + "-" + "0" + (maand + 1) + "-" + dag
+            datum = year + "/" + "0" + (maand + 1) + "/" + dag
         }
         if(dag < 10){
             datum = year + "-" + maand + "-" + "0" + dag
@@ -171,7 +171,7 @@
     }
 
     function day2() {
-        datum = year + "-" + maand + "-" + (dag + 1)
+        datum = year + "/" + maand + "/" + (dag + 1)
         if (maand < 10){
             datum = year + "-" + "0" + (maand + 1) + "-" + (dag + 1)
         }

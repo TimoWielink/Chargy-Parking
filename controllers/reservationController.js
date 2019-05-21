@@ -4,46 +4,41 @@ var LocalStorage = require('node-localstorage').LocalStorage,
 
 module.exports.insertTime = function (req, res) {
 
-
-
-
-    //
-    // console.log("GELUKT");
-    //
-    // let user = localStorage.getItem("user");
-    //
-    // let getusers = "SELECT * FROM resTime";
-    //
-    // con.query(getusers,[user], function (error, results, fields) {
-    //
-    //     let resultArray = Object.values(JSON.parse(JSON.stringify(results)));
-    //
-    //     resultArray.forEach(function (getString) {
-    //
-    //         // console.log(getString.from_time);
-    //         // console.log(getString.to_time);
-    //
-    //
-    //     });
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //     console.log("---------------------------------")
-    //
-    //
-    // });
-
-
-
-
-    //----------------------------TIJD PRIKKER--------------------------------------
     let date = req.body.a;
     let from = req.body.jedi;
     let till = req.body.java;
+
+
+
+    let arraydatum = [];
+    let arrayfrom = [];
+    let arraytill = [];
+    // '%d/%m/%Y'
+
+    con.query("SELECT *, DATE_FORMAT(datum, '%Y/%m/%d') AS nicedate FROM resTime", function (error, results, rows) {
+        if (error) throw error;
+        if (results.length > 0) {
+
+            let resultArray = Object.values(JSON.parse(JSON.stringify(results)));
+            resultArray.forEach(function (getString) {
+
+                arraydatum.push(getString.nicedate);
+                arrayfrom.push(getString.from_time);
+                arraytill.push(getString.to_time);
+
+                // console.log(getString.nicedate);
+
+
+            });
+
+        }
+    });
+
+    
+
+
+    //----------------------------TIJD PRIKKER--------------------------------------
+
 
     let person = localStorage.getItem("user");
 
@@ -55,8 +50,8 @@ module.exports.insertTime = function (req, res) {
         console.log("Reservation controller date: " + date);
         console.log("Reservation from time: " + from);
         console.log("Reservation till time: " + till);
-        res.redirect('/time')
     });
+
 
 
 

@@ -12,11 +12,10 @@ let user;
 // Authenticates if credentials are known in DB and correct
 module.exports.getRes = function (req, res) {
     let username = localStorage.getItem("user");
-    console.log(username);
 
-    let arraydatum = [""];
-    let arrayfrom = [""];
-    let arraytill = [""];
+    let arraydatum = [];
+    let arrayfrom = [];
+    let arraytill = [];
 
     con.query("SELECT *, DATE_FORMAT(datum, '%d/%m/%Y') AS nicedate FROM resTime WHERE email = ?", [username], function (error, results, rows) {
             if (error) throw error;
