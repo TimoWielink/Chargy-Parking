@@ -5,7 +5,6 @@ module.exports = function(app) {
     app.get('/', function(req, res) {
         res.render('pages/index',{
             verwijder: "hidden",
-
             set: "",
             login: "login",
             regist: "register",
@@ -32,7 +31,8 @@ module.exports = function(app) {
     });
     app.get('/res', function(req, res) {
         res.render('pages/res',{
-
+            fromT: "",
+            tillT: ""
         });
     });
 

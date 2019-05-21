@@ -8,7 +8,6 @@ let LocalStorage = require('node-localstorage').LocalStorage,
     localStorage = new LocalStorage('./scratch');
 
 
-let user;
 // Authenticates if credentials are known in DB and correct
 module.exports.getRes = function (req, res) {
     let username = localStorage.getItem("user");
