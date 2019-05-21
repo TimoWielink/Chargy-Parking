@@ -13,7 +13,7 @@ Voor het pad project Urban Analytics gaan we een reserverings
 
 NPM INSTALL
 
-NODEMON SERVER.js
+Node .
 
 ## Screenshots
 
