@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">PAD</a>
+                    <a class="nav-link js-scroll-trigger" href="#about" <%= set%>>PAD</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#projects" onclick="l()" <%= parkeren%> >Home</a>
@@ -38,7 +38,6 @@
     </div>
     <script>
         function f() {
-            alert("KECH")
             localStorage.removeItem("user")
             location.href = "/"
         }
@@ -51,6 +50,8 @@
             alert("zeker weten?")
             location.href = "/verwijder"
         }
+
+
 
 
 

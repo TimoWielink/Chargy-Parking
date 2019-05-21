@@ -25,7 +25,7 @@
             height: 50px;
             line-height: 50px;
             color: #1be847;
-            text-align: center;;
+            text-align: center;
         }
         input[type=checkbox] + div {
             background-color: #fdfbff;
@@ -42,9 +42,17 @@
             width: 405px;
         }
 
+        .ps{
+            text-align: center;
+            position: center;
+        }
+
     </style>
 </head>
 <body>
+<script>
+
+</script>
 
 <div class="limiter">
     <div class="container-login100" style="background-image: url('../../public/images/bg-01.jpg');">
@@ -109,30 +117,55 @@
                 <div class="container-login100-form-btn">
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
-                        <button class="login100-form-btn" type="submit" name="login" id="login">
+
+                        <button class="login100-form-btn" type="submit" name="login" id="login" onclick="give()" >
                             submit
                         </button>
 
+                     <p class="ps">--------------------------------------------</p>
+
+                        <a class="login100-form-btn" href="/time"> TERUG</a>
+
+
+
+
                     </div>
+
                 </div>
-
-
 
           </form>
 
-            <button onclick="getResv()">FUCK</button>
+
+
+
+
         </div>
     </div>
 </div>
 
 <script>
-//------------------------DO NOT TOUCH THIS CODE PLEASE----------------------------------------
 
-    var setFrom = 0
 
-    var setTill = 0
 
-    var week = localStorage.getItem("dag")
+
+
+
+
+
+//------------------------DO NOT TOUCH THIS CODE PLEASE I BEG YOU----------------------------------------
+
+
+
+
+for (let i = 0; i < 16 ; i++) {
+
+}
+
+    let setFrom = 0
+
+    let setTill = 0
+
+    let week = localStorage.getItem("dag")
 
 
 
@@ -183,7 +216,7 @@
         document.getElementById("jedi").value = setFrom
         document.getElementById("java").value = setTill
 
-        console.log("NEW FROM: " + document.getElementById("jedi").value)
+        console.log("NEW FROM " + document.getElementById("jedi").value)
         console.log("NEW TILL: " + document.getElementById("java").value)
 
     }
@@ -202,6 +235,14 @@
     console.log(document.getElementById("a").value)
     console.log("CONSTANTE FROM: " + document.getElementById("jedi").value)
     console.log("CONSTANTE TILL: " + document.getElementById("java").value)
+
+
+
+    function give() {
+        alert("uw reservatie: " + setFrom + " tot " + setTill )
+    }
+
+
 
 
 

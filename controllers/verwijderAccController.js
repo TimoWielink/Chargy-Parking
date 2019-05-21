@@ -1,4 +1,4 @@
-
+var con = require('./../config/config');
 
 
 module.exports.delete = function (req,res) {

@@ -22,6 +22,9 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'/>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
+    <style>
+
+    </style>
 </head>
 <body>
 <% include ../partials/nav.ejs %>
@@ -29,18 +32,35 @@
     <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto text-center">
             <h1>Reserveringen </h1>
-            <h2>Maak een Reservering</h2>
+            <h2></h2>
             <br>
             <br>
+
             <p id="pl"><%= name%></p>
 
-            <p id="pl"><%= datum%></p>
+            <ul >
+                <% for (var i = 1; i <datum.length ; i++) { %>
+                    <li> Datum: <%- datum[i]%> Van: <%- fromTime[i]%> Tot: <%- toTime[i]%> <button onclick="delt"> delete</button></li>
+               <% } %>
+            </ul>
+
+            <!--<p id="pl">  <%= datum%>  </p>-->
+            <!--<p id="pl"> van: <%=fromTime%></p>-->
+            <!--<p id="pl"> tot: <%=toTime%></p>-->
+
+            <ul id="myList">
+
+            </ul>
+
+
 
             <form method="post" name="Registersubmi" id="Registersubmi">
-            <p id="pl">van: <%=fromTime%></p>
-                <p>tot: <%=toTime%></p>
+
             <button  class="btn btn-primary" id="Registersubmi" name="Registersubmi" type="submit" >uw reservaties</button>
+                <button  class="btn btn-primary" id="BR"  type="submit" hidden>uw reservaties</button>
+
             </form>
+
 
 
         </div>
@@ -53,6 +73,13 @@
 
 
 <script>
+
+
+    function delt(){
+        alert("deleted")
+            console.log("adwawd")
+    }
+
 
 
     mapboxgl.accessToken = 'pk.eyJ1IjoidGltb3dpZWxpbmsiLCJhIjoiY2ptZ3BzN3RzMHpqYTN2cGZqYXF1bjNmZSJ9.eAX3yLCUNCOMTnP8yDUjEw';

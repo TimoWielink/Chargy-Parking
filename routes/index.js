@@ -32,14 +32,7 @@ module.exports = function(app) {
     });
     app.get('/res', function(req, res) {
         res.render('pages/res',{
-            verwijder: "",
-            parkeren: "",
-            set: "hidden",
-            login: "",
-            regist: "",
-            myRes: "my reservation",
-            profile: "profile",
-            loguit: "log uit"
+
         });
     });
 
@@ -81,7 +74,7 @@ module.exports = function(app) {
     app.get('/myRes', function(req, res) {
 
         res.render('pages/myRes',{
-            name:"asss",
+            name:"",
             datum: "empty",
             fromTime:"Click the button below to ",
             toTime:"show your reservations",

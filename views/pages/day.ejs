@@ -21,6 +21,7 @@
 </head>
 <body>
 
+
 <div id="bg-col-4-2">
 
     <section class="pricing m-5 vertical-center" id="pricing-margin" >
@@ -33,7 +34,7 @@
                             <h5 class="card-title text-muted text-uppercase text-center" id="today1">7 Mei</h5>
                             <h6 class="card-price text-center" id="today2"><span class="period"></span></h6>
                             <hr>
-                            <a href="/res" class="btn btn-block btn-primary text-uppercase" onclick="day1()">Kies</a>
+                            <button class="btn btn-block btn-primary text-uppercase"  onclick="day1()"> KIES</button>
                         </div>
                     </div>
                 </div>
@@ -44,7 +45,7 @@
                             <h5 class="card-title text-muted text-uppercase text-center" id="weekdag1">7 Mei</h5>
                             <h6 class="card-price text-center" id="weekdag2"><span class="period"></span></h6>
                             <hr>
-                            <a href="/res" class="btn btn-block btn-primary text-uppercase" onclick="day2()">Kies</a>
+                            <button class="btn btn-block btn-primary text-uppercase"  onclick="day2()"> KIES</button>
                         </div>
                     </div>
                 </div>
@@ -56,7 +57,7 @@
                             <h6 class="card-price text-center" id="weekdag4"><span class="period"></span></h6>
                             <hr>
 
-                            <a href="/res" class="btn btn-block btn-primary text-uppercase" onclick="day3()">KIes</a>
+                            <button class="btn btn-block btn-primary text-uppercase"  onclick="day3()"> KIES</button>
                         </div>
                     </div>
                 </div>
@@ -68,7 +69,7 @@
                             <h6 class="card-price text-center" id="weekdag6"><span class="period"></span></h6>
                             <hr>
 
-                            <a href="/res" class="btn btn-block btn-primary text-uppercase" onclick="day4()">Kies</a>
+                            <button class="btn btn-block btn-primary text-uppercase"  onclick="day4()"> KIES</button>
                         </div>
                     </div>
                 </div>
@@ -79,7 +80,7 @@
                             <h5 class="card-title text-muted text-uppercase text-center" id="weekdag7"></h5>
                             <h6 class="card-price text-center" id="weekdag8"><span class="period"></span></h6>
                             <hr>
-                            <a href="/res" class="btn btn-block btn-primary text-uppercase" onclick="day5()">Kies</a>
+                            <button class="btn btn-block btn-primary text-uppercase"  onclick="day5()"> KIES</button>
                         </div>
                     </div>
                 </div>
@@ -90,7 +91,7 @@
                             <h5 class="card-title text-muted text-uppercase text-center" id="weekdag9"></h5>
                             <h6 class="card-price text-center" id="weekdag10"><span class="period"></span></h6>
                             <hr>
-                            <a href="/res" class="btn btn-block btn-primary text-uppercase" onclick="day6()">Kies</a>
+                            <button class="btn btn-block btn-primary text-uppercase"  onclick="day6()"> KIES</button>
                         </div>
                     </div>
                 </div>
@@ -101,7 +102,7 @@
                             <h5 class="card-title text-muted text-uppercase text-center" id="weekdag11"></h5>
                             <h6 class="card-price text-center" id="weekdag12"><span class="period" onclick="day7()"></span></h6>
                             <hr>
-                            <a href="/res" class="btn btn-block btn-primary text-uppercase" onclick="day7()">Kies</a>
+                            <button class="btn btn-block btn-primary text-uppercase" type="submit" name="login" id="login" onclick="day7()"> KIES</button>
                         </div>
                     </div>
                 </div>
@@ -159,85 +160,92 @@
     function day1() {
         datum = year + "-" + maand + "-" + dag
         if (maand < 10){
-            datum = year + "-" + "0" + maand + "-" + dag
+            datum = year + "-" + "0" + (maand + 1) + "-" + dag
         }
         if(dag < 10){
             datum = year + "-" + maand + "-" + "0" + dag
         }
         localStorage.setItem("date", datum)
         localStorage.setItem("dag", week)
+        location.href = "/res"
     }
 
     function day2() {
         datum = year + "-" + maand + "-" + (dag + 1)
         if (maand < 10){
-            datum = year + "-" + "0" + maand + "-" + (dag + 1)
+            datum = year + "-" + "0" + (maand + 1) + "-" + (dag + 1)
         }
         if(dag < 10){
             datum = year + "-" + maand + "-" + "0" + (dag + 1)
         }
         localStorage.setItem("date", datum)
         localStorage.setItem("dag", week + 1)
+        location.href = "/res"
     }
 
     function day3() {
         datum = year + "-" + maand + "-" + (dag + 2)
         if (maand < 10){
-            datum = year + "-" + "0" + maand + "-" + (dag + 2)
+            datum = year + "-" + "0" + (maand + 1) + "-" + (dag + 2)
         }
         if(dag < 10){
             datum = year + "-" + maand + "-" + "0" + (dag + 2)
         }
         localStorage.setItem("date", datum)
         localStorage.setItem("dag", week + 2)
+        location.href = "/res"
     }
 
     function day4() {
         datum = year + "-" + maand + "-" + (dag + 3)
         if (maand < 10){
-            datum = year + "-" + "0" + maand + "-" + (dag + 3)
+            datum = year + "-" + "0" + (maand + 1) + "-" + (dag + 3)
         }
         if(dag < 10){
             datum = year + "-" + maand + "-" + "0" + (dag + 3)
         }
         localStorage.setItem("date", datum)
         localStorage.setItem("dag", week + 3)
+        location.href = "/res"
     }
 
     function day5() {
         datum = year + "-" + maand + "-" + (dag + 4)
         if (maand < 10){
-            datum = year + "-" + "0" + maand + "-" + (dag + 4)
+            datum = year + "-" + "0" + (maand + 1) + "-" + (dag + 4)
         }
         if(dag < 10){
             datum = year + "-" + maand + "-" + "0" + (dag + 4)
         }
         localStorage.setItem("date", datum)
         localStorage.setItem("dag", week + 4)
+        location.href = "/res"
     }
 
     function day6() {
         datum = year + "-" + maand + "-" + (dag + 5)
         if (maand < 10){
-            datum = year + "-" + "0" + maand + "-" + (dag + 5)
+            datum = year + "-" + "0" + (maand + 1) + "-" + (dag + 5)
         }
         if(dag < 10){
             datum = year + "-" + maand + "-" + "0" + (dag + 5)
         }
         localStorage.setItem("date", datum)
         localStorage.setItem("dag", week + 5)
+        location.href = "/res"
     }
 
     function day7() {
         datum = year + "-" + maand + "-" + (dag + 6)
         if (maand < 10){
-            datum = year + "-" + "0" + maand + "-" + (dag + 6)
+            datum = year + "-" + "0" + (maand + 1) + "-" + (dag + 6)
         }
         if(dag < 10){
             datum = year + "-" + maand + "-" + "0" + (dag + 6)
         }
         localStorage.setItem("date", datum)
         localStorage.setItem("dag", week + 6)
+        location.href = "/res"
     }
 
 

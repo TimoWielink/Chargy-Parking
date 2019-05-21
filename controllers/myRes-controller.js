@@ -14,23 +14,37 @@ module.exports.getRes = function (req, res) {
     let username = localStorage.getItem("user");
     console.log(username);
 
+    let arraydatum = [""];
+    let arrayfrom = [""];
+    let arraytill = [""];
+
     con.query("SELECT *, DATE_FORMAT(datum, '%d/%m/%Y') AS nicedate FROM resTime WHERE email = ?", [username], function (error, results, rows) {
             if (error) throw error;
             if (results.length > 0) {
 
                 let resultArray = Object.values(JSON.parse(JSON.stringify(results)));
                 resultArray.forEach(function (getString) {
-                    console.log(getString);
-                    console.log(getString.from_time);
-                    console.log(getString.to_time);
-                    console.log(getString.nicedate);
+                    // console.log(getString);
+                    // console.log(getString.from_time);
+                    // console.log(getString.to_time);
+                    // console.log(getString.nicedate);
+
+                    arraydatum.push(getString.nicedate);
+                    arrayfrom.push(getString.from_time);
+                    arraytill.push(getString.to_time);
+
+
+
+                });
+
+
 
 
                     res.render('pages/myRes', {
                         name: username,
-                        datum: getString.nicedate,
-                        fromTime: getString.from_time,
-                        toTime: getString.to_time,
+                        datum: arraydatum,
+                        fromTime: arrayfrom,
+                        toTime: arraytill,
                         verwijder: "",
                         parkeren: "",
                         set: "hidden",
@@ -40,7 +54,6 @@ module.exports.getRes = function (req, res) {
                         profile: "profile",
                         loguit: "log uit"
                     })
-                });
 
 
             } else {

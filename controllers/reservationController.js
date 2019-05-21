@@ -4,34 +4,60 @@ var LocalStorage = require('node-localstorage').LocalStorage,
 
 module.exports.insertTime = function (req, res) {
 
+
+
+
+    //
+    // console.log("GELUKT");
+    //
+    // let user = localStorage.getItem("user");
+    //
+    // let getusers = "SELECT * FROM resTime";
+    //
+    // con.query(getusers,[user], function (error, results, fields) {
+    //
+    //     let resultArray = Object.values(JSON.parse(JSON.stringify(results)));
+    //
+    //     resultArray.forEach(function (getString) {
+    //
+    //         // console.log(getString.from_time);
+    //         // console.log(getString.to_time);
+    //
+    //
+    //     });
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //     console.log("---------------------------------")
+    //
+    //
+    // });
+
+
+
+
+    //----------------------------TIJD PRIKKER--------------------------------------
     let date = req.body.a;
     let from = req.body.jedi;
     let till = req.body.java;
 
-
-
-    // let insert = "UPDATE resTime SET t01 = ?, t02 = ?,t03 = ?,t04 = ?, t05 = ?, t06 = ?, t07 = ?, t08 = ?, t09 = ?, t10 = ?, t11 = ?, t12 = ?, t13 = ?, t14 = ?, t15 = ?, t16 = ?, t17 = ?, t18 = ?, t19 = ?, t20 = ?, t21 = ?, t22 = ?, t23 = ?, t00 = ? WHERE email = 'oz@oz.nl'";
-    // con.query(insert, [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x], function (error) {
-
-
     let person = localStorage.getItem("user");
-    // let datum = localStorage.getItem("date");
 
-
-
-
-    // let resTimeUpdate = "INSERT INTO resTime (email,datum , from_time , to_time) VALUES (?,?,?,?)";
-    let resTimeUpdate = "UPDATE resTime SET datum = ?, from_time = ?, to_time = ? WHERE email = ?";
-    con.query(resTimeUpdate, [date,from,till, person], function (error) {
-
+    let resTimeUpdate = "INSERT INTO resTime (email,datum , from_time , to_time) VALUES (?,?,?,?)";
+    // let resTimeUpdate = "UPDATE resTime SET datum = ?, from_time = ?, to_time = ? WHERE email = ?";
+    con.query(resTimeUpdate, [ person, date, from, till], function (error) {
         if (error) throw error;
         console.log("1 record inserted");
-        res.redirect('/time');
         console.log("Reservation controller date: " + date);
         console.log("Reservation from time: " + from);
         console.log("Reservation till time: " + till);
-
+        res.redirect('/time')
     });
+
 
 
 

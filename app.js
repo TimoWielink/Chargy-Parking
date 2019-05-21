@@ -50,6 +50,7 @@ app.use(session({
 // ================================================================
 routes(app);
 
+
 app.post('/register',registerController.register);
 app.post('/login',authenticateController.authenticate);
 app.post('/res', reservationController.insertTime);
@@ -57,6 +58,7 @@ app.post('/controllers/register-controller', registerController.register);
 app.post('/controllers/authenticate-controller', authenticateController.authenticate);
 app.post('/myRes',  myResController.getRes);
 app.post('/verwijder', verwijderAccController.delete);
+
 
 
 
