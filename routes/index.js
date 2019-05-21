@@ -5,7 +5,7 @@ module.exports = function(app) {
     app.get('/', function(req, res) {
         res.render('pages/index',{
             verwijder: "hidden",
-            parkeren: "hidden",
+
             set: "",
             login: "login",
             regist: "register",
@@ -45,7 +45,7 @@ module.exports = function(app) {
     app.get('/time', function(req, res) {
         res.render('pages/time',{
             verwijder: "",
-            parkeren: "",
+
             set: "hidden",
             login: "",
             regist: "",
@@ -59,7 +59,7 @@ module.exports = function(app) {
     app.get('/profile', function(req, res) {
         res.render('pages/profile',{
             verwijder: "",
-            parkeren: "",
+
             set: "hidden",
             login: "",
             regist: "",
@@ -79,7 +79,7 @@ module.exports = function(app) {
             fromTime:"Click the button below to ",
             toTime:"show your reservations",
             verwijder: "",
-            parkeren: "",
+
             set: "hidden",
             login: "",
             regist: "",

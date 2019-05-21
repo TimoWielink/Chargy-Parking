@@ -45,7 +45,6 @@ module.exports.getRes = function (req, res) {
                         fromTime: arrayfrom,
                         toTime: arraytill,
                         verwijder: "",
-                        parkeren: "",
                         set: "hidden",
                         login: "",
                         regist: "",
