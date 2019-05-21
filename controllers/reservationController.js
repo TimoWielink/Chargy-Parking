@@ -22,19 +22,22 @@ module.exports.insertTime = function (req, res) {
             let resultArray = Object.values(JSON.parse(JSON.stringify(results)));
             resultArray.forEach(function (getString) {
 
+
                 arraydatum.push(getString.nicedate);
                 arrayfrom.push(getString.from_time);
                 arraytill.push(getString.to_time);
 
                 // console.log(getString.nicedate);
 
-
             });
 
         }
     });
 
-    
+    res.render('pages/res', {
+        fromT: arrayfrom,
+        tillT: arraytill,
+    });
 
 
     //----------------------------TIJD PRIKKER--------------------------------------

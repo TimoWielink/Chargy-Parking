@@ -44,20 +44,11 @@
                <% } %>
             </ul>
 
-            <!--<p id="pl">  <%= datum%>  </p>-->
-            <!--<p id="pl"> van: <%=fromTime%></p>-->
-            <!--<p id="pl"> tot: <%=toTime%></p>-->
-
-            <ul id="myList">
-
-            </ul>
 
 
+            <form method="post" name="Registersubmi" id="regg">
 
-            <form method="post" name="Registersubmi" id="Registersubmi">
-
-            <button  class="btn btn-primary" id="Registersubmi" name="Registersubmi" type="submit" >uw reservaties</button>
-                <button  class="btn btn-primary" id="BR"  type="submit" hidden>uw reservaties</button>
+            <button  class="btn btn-primary" id="RR" name="Registersubmi" type="submit" hidden>uw reservaties</button>
 
             </form>
 
@@ -71,14 +62,19 @@
 </div>
 
 
+
 <script>
 
 
-    function delt(){
-        alert("deleted")
-            console.log("adwawd")
+    window.onload = function(){
+        if (localStorage.getItem("formd") !== "true"){
+            localStorage.setItem("formd", "true")
+            document.getElementById("RR").click()
+        }else{
+            localStorage.setItem("formd", "false")
+        }
+        console.log(localStorage.getItem("formd"))
     }
-
 
 
     mapboxgl.accessToken = 'pk.eyJ1IjoidGltb3dpZWxpbmsiLCJhIjoiY2ptZ3BzN3RzMHpqYTN2cGZqYXF1bjNmZSJ9.eAX3yLCUNCOMTnP8yDUjEw';
