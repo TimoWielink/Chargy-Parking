@@ -100,7 +100,7 @@ p.customfont {
     width: 100%;
     height: auto;
     min-height: 35rem;
-    padding: 15rem 0;
+    padding: 24em 5em!important;
     background: url("/public/Images/main.jpg");
     /*background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-masthead.jpg");*/
     background-position: center;
@@ -109,10 +109,11 @@ p.customfont {
     background-size: cover;
 }
 
-.masthead h1 {
-    font-family: 'Nexa Bold';
+.masthead h2 {
+    font-family: 'Nexa Bold', serif;
+
     color: #1d1d27;
-    font-size: 20px;
+    font-size: 2.5em!important;
     /*font-size: 2.5rem;*/
     /*line-height: 2.5rem;*/
     /*letter-spacing: 0.8rem;*/
@@ -128,7 +129,7 @@ width: 50%;
 }
 
 .masthead h2 {
-    max-width: 20rem;
+
     font-size: 1rem;
 }
 
@@ -150,15 +151,35 @@ width: 50%;
         /*letter-spacing: 0.8rem;*/
     }
     .masthead h2 {
-        max-width: 30rem;
+
         font-size: 1.25rem;
     }
 }
+.extra-weight{
+    font-weight: 700;
+}
+.logo-footer img{
+    width: 100%;
 
+}
+
+.footer-list ul{
+    list-style-type: none;
+}
+
+.footer-list a{
+    color: white;
+}
+
+.img-custom{
+    width: 100%;
+    height: 100%;
+}
 .btn {
     -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
     box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-    padding: 1.25rem 2rem;
+    padding: 1em 2rem;
+    margin-top: 1em;
     font-family: 'Varela Round';
     font-size: 80%;
     text-transform: uppercase;
@@ -324,14 +345,13 @@ footer {
 .text_1 {
     animation: text1;
 }
-
 .text_2 {
     animation: text2;
 }
 .text_3 {
     animation: text3;
 }
-.text_1, .text_2, text_3 {
+.text_1, .text_2, .text_3 {
     overflow: hidden;
     white-space: nowrap;
     display: inline-block;
@@ -341,7 +361,7 @@ footer {
     animation-iteration-count: infinite;
 }
 
-.text_1::after, .text_2::after {
+.text_1::after, .text_2::after, .text_3::after {
     content: "|";
     position: absolute;
     right: 0;
@@ -349,31 +369,35 @@ footer {
     animation-duration: 1s;
     animation-timing-function: steps(1, end);
 }
-
 @keyframes text2 {
     0%, 50%, 100% {
         width: 0;
     }
 
-    60%, 90% {
-        width: 10.2em;
+    40%, 75 % {
+        width: 7em;
     }
 }
 
+
 @keyframes text1 {
-      0%, 50%, 100% {
-          width: 0;
-      }
-      10%, 40% {
-          width: 10em;
-      }
-  }
+    0%, 50%, 100% {
+        width: 0;
+    }
+    10%, 30% {
+        width: 10em;
+    }
+}
+
+
+
+
 @keyframes text3 {
     0%, 50%, 100% {
         width: 0;
     }
-    10%, 40% {
-        width: 10em;
+    60%, 100% {
+        width: 7em;
     }
 }
 
@@ -384,6 +408,7 @@ footer {
     50% {
         opacity: 1;
     }
+
 }
 
 

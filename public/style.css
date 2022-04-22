@@ -1,6 +1,4 @@
 
-* Sticky footer styles
--------------------------------------------------- *
 html {
     position: relative;
     min-height: 100%;
@@ -27,4 +25,8 @@ body {
 .footer a {
     color: #efb22e;
     text-decoration: none;
+}
+
+.masthead-main h2{
+    font-size: 2em!important;
 }
