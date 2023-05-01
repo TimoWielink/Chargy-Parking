@@ -37,7 +37,7 @@
     "jquery": "^3.5.0",
     "mysql": "^2.16.0",
     "node-localstorage": "^1.3.1",
-    "nodemon": "^2.0.15",
+    "nodemon": "^2.0.22",
     "particlesjs": "^2.2.3",
     "password-hash": "^1.2.2",
     "popper": "^1.0.1",
